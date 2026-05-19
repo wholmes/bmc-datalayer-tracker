@@ -966,37 +966,37 @@ const context = window.ADTSession?.getContext();
 
 ## 💎 Premium Features
 
-### What's Included
+**DataLayer Tracker Pro** is a **separate companion plugin** (sold at [datalayer-tracker.com](https://datalayer-tracker.com)). It is **not** included in this WordPress.org repository or ZIP. The free build here omits Pro modules entirely (they are not locked behind a license in wp-admin).
 
-**🎯 Multi-Pixel Tracking**
-- Fire to 6+ advertising platforms simultaneously
-- Dual pixel mode (GTM + Direct SDK)
-- Custom event mapping
-- Auto SDK loading
+When you install **Pro** alongside the core plugin, you get the modules below. WooCommerce browser events, cart abandonment, refunds, sessions, engagement signals, and the debug overlay are part of the **free** core—not listed here.
 
-**📊 Advanced Ecommerce**
-- Cart abandonment tracking
-- Session-aware metrics
-- Customer journey tracking
-- Refund tracking
+### What's in the Pro add-on
 
-**📝 Advanced Form Tracking**
-- Field-level interaction tracking
-- Form abandonment detection
-- Vendor-specific integrations (20+ platforms)
-- Form analytics dashboard
+**🎯 Advertising pixels (Pixel Manager)**
+- Direct browser pixels for **Meta, TikTok, Google Ads, LinkedIn, X, and Pinterest**
+- Optional **dual mode**: fire through GTM *and* platform SDKs when configured
+- **JSON event mapping** — choose which dataLayer events go to which platforms
 
-**🔧 Developer Tools**
-- Event simulator
-- Advanced debug overlay with filters
-- SDK status monitoring
-- Export history tracking
+**📡 Server-side tracking**
+- **Meta Conversions API (CAPI)**
+- **GA4 Measurement Protocol** (server-side GA4 hits)
 
-**💼 Premium Support**
-- Priority email support
-- Setup assistance
-- Custom implementation help
-- Regular feature updates
+**🏷️ GTM workflow**
+- **GTM container JSON export** — generate a container aligned with your ADT event setup for import into Tag Manager
+
+**🧠 Content intelligence**
+- Content-intelligence signals and related session summaries (not shipped in the free WordPress.org build)
+
+**📋 Presets & configuration**
+- **Preset library** in wp-admin for faster rollout across sites
+
+**📝 Advanced form tracking**
+- **Field-level** interactions (`form_field_start`, `form_field_abandon`, etc.) beyond basic form lifecycle events
+- **Form vendor shortcuts** for popular builders (e.g. Gravity Forms, HubSpot, WPForms, Contact Form 7, Formidable, and others)
+
+**💼 Pro support**
+- Priority email support: support@datalayer-tracker.com
+- Documentation: [Knowledge base](https://datalayer-tracker.com/knowledge-base)
 
 ---
 
