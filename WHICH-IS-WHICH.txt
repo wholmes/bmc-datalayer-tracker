@@ -1,0 +1,31 @@
+BrandMeetsCode DataLayer Tracker — free plugin repo (bmc-datalayer-tracker)
+
+GitHub: git@github.com:wholmes/bmc-datalayer-tracker.git
+       https://github.com/wholmes/bmc-datalayer-tracker
+
+OFFICIAL WORDPRESS.ORG NAMES
+  Display name: BrandMeetsCode DataLayer Tracker
+  Slug / install folder / text domain: brandmeetscode-datalayer-tracker
+  Main file: brandmeetscode-datalayer-tracker.php
+  In wp-admin UI (menus, overlay, settings): DataLayer Tracker
+
+PLUGIN SOURCE (all PHP, admin/, includes/, assets/)
+  → Folder in this repo: brandmeetscode-datalayer-tracker/
+  → Same folder name on WordPress after install or ZIP upload
+
+NOT A PLUGIN BY ITSELF — repo root files (README.md, build-free-zip.sh, etc.)
+  do NOT drop the whole repo into wp-content/plugins/.
+
+LOCAL WORDPRESS — symlink into wp-content/plugins/:
+  ./dev-link-wp-plugins.sh /path/to/wp-content/plugins
+
+WORDPRESS.ORG ZIP:
+  ./build-free-zip.sh  → brandmeetscode-datalayer-tracker-wporg-<version>.zip
+
+PRO ADD-ON: separate product / repository (not in this repo).
+
+RESET FEATURE CAROUSEL (admin):
+  /wp-admin/admin.php?page=adt-settings&adt_reset_feature_carousel=1
+
+RESUBMISSION: Request slug brandmeetscode-datalayer-tracker in Plugin Review email
+  when uploading the ZIP (see WPORG-SLUG-REPLY.txt).

@@ -1,0 +1,1836 @@
+# Copyright (C) 2025 Whittfield Holmes
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced DataLayer Tracker 1.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-"
+"datalayer-tracker\n"
+"POT-Creation-Date: 2025-10-20T02:22:48+00:00\n"
+"PO-Revision-Date: 2025-10-19 22:32-0500\n"
+"Last-Translator: Whittfield Holmes <wecreateyou@gmail.com>\n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: datalayer-tracker\n"
+
+#. Plugin Name of the plugin
+#: brandmeetscode-datalayer-tracker.php admin/adt-settings-functions.php:7
+#: admin/adt-settings-page.php:1040
+msgid "Advanced DataLayer Tracker"
+msgstr "أداة تعقب طبقة البيانات المتقدمة"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: brandmeetscode-datalayer-tracker.php
+msgid "https://whittfield.com/"
+msgstr "https://whittfield.com/"
+
+#. Description of the plugin
+#: brandmeetscode-datalayer-tracker.php
+msgid ""
+"Injects a dynamic dataLayer with engagement, ecommerce, and content "
+"intelligence"
+msgstr ""
+"حقن طبقة بيانات ديناميكية مع المشاركة والتجارة الإلكترونية وذكاء المحتوى"
+
+#. Author of the plugin
+#: brandmeetscode-datalayer-tracker.php admin/adt-settings-page.php:1044
+msgid "Whittfield Holmes"
+msgstr "ويتفيلد هولمز"
+
+#: admin/adt-admin-assets.php:63 includes/adt-frontend-config.php:668
+msgid "Need a template for Custom Events?"
+msgstr "هل تحتاج إلى قالب للأحداث المخصصة؟"
+
+#: admin/adt-admin-assets.php:64 includes/adt-frontend-config.php:669
+msgid "Load Example Events"
+msgstr "تحميل أمثلة على الأحداث"
+
+#: admin/adt-admin-assets.php:65 includes/adt-frontend-config.php:670
+msgid "Clear"
+msgstr "مسح"
+
+#: admin/adt-admin-assets.php:66 includes/adt-frontend-config.php:675
+msgid "Example events loaded"
+msgstr "أمثلة على الأحداث التي تم تحميلها"
+
+#: admin/adt-admin-assets.php:67 includes/adt-frontend-config.php:676
+msgid "Custom events cleared"
+msgstr "تم مسح الأحداث المخصصة"
+
+#: admin/adt-admin-assets.php:68 admin/adt-settings-functions.php:991
+#: includes/adt-frontend-config.php:671
+msgid "Raw JSON"
+msgstr "JSON خام"
+
+#: admin/adt-admin-assets.php:69 includes/adt-frontend-config.php:672
+msgid "Visual Summary"
+msgstr "ملخص مرئي"
+
+#: admin/adt-admin-assets.php:70 admin/adt-admin-assets.php:76
+#: includes/adt-frontend-config.php:679
+msgid "Tags"
+msgstr "الوسوم"
+
+#: admin/adt-admin-assets.php:71 admin/adt-admin-assets.php:77
+#: includes/adt-frontend-config.php:680
+msgid "Triggers"
+msgstr "مشغلات"
+
+#: admin/adt-admin-assets.php:72 admin/adt-admin-assets.php:78
+#: includes/adt-frontend-config.php:681
+msgid "Variables"
+msgstr "المتغيرات"
+
+#: admin/adt-admin-assets.php:73 includes/adt-frontend-config.php:682
+msgid "Mode"
+msgstr "الوضع"
+
+#: admin/adt-admin-assets.php:74
+msgid "Included Features"
+msgstr "الميزات المضمنة"
+
+#: admin/adt-admin-assets.php:75
+msgid "Export Time"
+msgstr "وقت التصدير"
+
+#: admin/adt-admin-assets.php:79
+msgid "📂 No export history found."
+msgstr "📂 لم يتم العثور على سجل تصدير."
+
+#: admin/adt-admin-assets.php:80 admin/adt-settings-page.php:552
+msgid "Pro"
+msgstr "إحترافي"
+
+#: admin/adt-admin-assets.php:81
+msgid "Free"
+msgstr "مجاني"
+
+#: admin/adt-admin-assets.php:82
+msgid "Debug ON"
+msgstr "تشغيل التصحيح"
+
+#: admin/adt-admin-assets.php:83
+msgid "Debug OFF"
+msgstr "إيقاف تشغيل التصحيح"
+
+#: admin/adt-admin-assets.php:84
+msgid "Export ID"
+msgstr "تصدير التعريف"
+
+#: admin/adt-admin-assets.php:85
+msgid "User"
+msgstr "المستخدم"
+
+#: admin/adt-admin-assets.php:86
+msgid "You"
+msgstr "أنت"
+
+#: admin/adt-consent-status-panel.php:88
+msgid "🔒 ADT Consent & Privacy Status"
+msgstr "🔒 حالة موافقة ADT والخصوصية"
+
+#: admin/adt-settings-fields.php:187
+msgid "✅ Valid JSON"
+msgstr "✅ JSON صالح"
+
+#: admin/adt-settings-fields.php:188
+msgid "❌ Invalid JSON"
+msgstr "❌ JSON غير صالح"
+
+#: admin/adt-settings-fields.php:263
+msgid "Field Map Debug: Registered Plugin Fields"
+msgstr "تصحيح خريطة الحقل: حقول المكونات الإضافية المسجلة"
+
+#: admin/adt-settings-fields.php:268
+msgid "Orphaned Fields Detected"
+msgstr "الحقول اليتيمة المكتشفة"
+
+#: admin/adt-settings-fields.php:269
+msgid ""
+"These fields exist in your database but are not defined in the current "
+"plugin architecture. They are safe to remove:"
+msgstr ""
+"هذه الحقول موجودة في قاعدة بياناتك ولكنها غير محددة في بنية الإضافة الحالية. "
+"يمكن إزالتها بأمان:"
+
+#: admin/adt-settings-fields.php:279
+msgid "Clean Up Orphaned Fields"
+msgstr "تنظيف الحقول اليتيمة"
+
+#: admin/adt-settings-fields.php:281
+#, php-format
+msgid "(%d field(s) will be removed)"
+msgstr "(%d سيتم إزالة حقل (حقول) %d)"
+
+#: admin/adt-settings-fields.php:287
+msgid "Field Map Structure by Section"
+msgstr "هيكل الخريطة الميدانية حسب القسم"
+
+#: admin/adt-settings-fields.php:290
+msgid "$field_map is not defined or empty."
+msgstr "$ Field_map غير معرّف أو فارغ."
+
+#: admin/adt-settings-fields.php:339
+msgid "Backend Saved Settings (PHP):"
+msgstr "الإعدادات المحفوظة في الواجهة الخلفية (PHP):"
+
+#: admin/adt-settings-fields.php:342
+msgid "No ADT settings found. Save your settings first."
+msgstr "لم يتم العثور على إعدادات ADT. احفظ إعداداتك أولاً."
+
+#: admin/adt-settings-fields.php:344
+msgid "Flat Settings with Default Comparison"
+msgstr "الإعدادات المسطحة مع المقارنة الافتراضية"
+
+#: admin/adt-settings-fields.php:476
+msgid "Summary Statistics"
+msgstr "إحصائيات موجزة"
+
+#: admin/adt-settings-fields.php:478
+msgid "Total Fields:"
+msgstr "إجمالي الحقول:"
+
+#: admin/adt-settings-fields.php:479
+msgid "Matches Default:"
+msgstr "التطابق الافتراضي:"
+
+#: admin/adt-settings-fields.php:480
+msgid "Custom Values:"
+msgstr "القيم المخصصة:"
+
+#: admin/adt-settings-fields.php:481
+msgid "Not Saved Yet:"
+msgstr "لم يتم حفظه بعد"
+
+#: admin/adt-settings-fields.php:483
+msgid "Orphaned Fields:"
+msgstr "الحقول اليتيمة"
+
+#: admin/adt-settings-fields.php:489
+msgid "Live Frontend ADTData.include (JS)"
+msgstr "الواجهة الأمامية المباشرة ADTData.include (JS)"
+
+#: admin/adt-settings-fields.php:490
+msgid ""
+"This shows what feature flags are sent to the frontend. Only available when "
+"viewing the frontend with debug mode enabled."
+msgstr ""
+"يُظهر هذا علامات الميزات التي يتم إرسالها إلى الواجهة الأمامية. متاح فقط عند "
+"عرض الواجهة الأمامية مع تمكين وضع التصحيح."
+
+#: admin/adt-settings-fields.php:491
+msgid "Not available in admin area."
+msgstr "غير متوفر في منطقة الإدارة."
+
+#: admin/adt-settings-functions.php:8
+msgid "DataLayer Tracker"
+msgstr "تعقب طبقة البيانات"
+
+#: admin/adt-settings-functions.php:33
+msgid "Scroll Depth"
+msgstr "عمق التمرير"
+
+#: admin/adt-settings-functions.php:34
+msgid "Scroll 25% Milestone"
+msgstr "تمرير 25% علامة فارقة 25%"
+
+#: admin/adt-settings-functions.php:35
+msgid "Scroll 50% Milestone"
+msgstr "التمرير 50٪ علامة فارقة 50٪"
+
+#: admin/adt-settings-functions.php:36
+msgid "Scroll 75% Milestone"
+msgstr "التمرير 75% علامة فارقة"
+
+#: admin/adt-settings-functions.php:37
+msgid "Scroll 100% Milestone"
+msgstr "التمرير 100٪ علامة فارقة 100٪"
+
+#: admin/adt-settings-functions.php:38
+msgid "Scroll Back Up"
+msgstr "التمرير احتياطيًا لأعلى"
+
+#: admin/adt-settings-functions.php:39
+msgid "Time on Page"
+msgstr "الوقت على الصفحة"
+
+#: admin/adt-settings-functions.php:40
+msgid "Active Time"
+msgstr "وقت النشاط"
+
+#: admin/adt-settings-functions.php:41
+msgid "Tab Focus/Blur Events"
+msgstr "علامات التبويب التركيز/الأحداث الطمس"
+
+#: admin/adt-settings-functions.php:42
+msgid "Hover Intent (CTA Hover)"
+msgstr "نية التحويم (CTA Hover)"
+
+#: admin/adt-settings-functions.php:43 admin/adt-settings-register.php:637
+msgid "Last Engaged Section"
+msgstr "قسم المشاركة الأخيرة"
+
+#: admin/adt-settings-functions.php:44 admin/adt-settings-register.php:651
+msgid "Last Content Type Viewed"
+msgstr "آخر نوع المحتوى الذي تم عرضه"
+
+#: admin/adt-settings-functions.php:45
+msgid "HTML5 Video Progress"
+msgstr "تقدم فيديو HTML5"
+
+#: admin/adt-settings-functions.php:46 admin/adt-settings-register.php:466
+msgid "Track Default Clicks"
+msgstr "تتبع النقرات الافتراضية"
+
+#: admin/adt-settings-functions.php:47
+msgid "Form Field Tracking"
+msgstr "تتبع حقول النماذج"
+
+#: admin/adt-settings-functions.php:48
+msgid "Ecommerce"
+msgstr "التجارة الإلكترونية"
+
+#: admin/adt-settings-functions.php:49 admin/adt-settings-page.php:282
+#: admin/adt-settings-register.php:198
+msgid "Content Intelligence"
+msgstr "ذكاء المحتوى"
+
+#: admin/adt-settings-functions.php:50
+msgid "CTA Exposure"
+msgstr "التعرض ل CTA"
+
+#: admin/adt-settings-functions.php:51
+msgid "Form Submit Tracking"
+msgstr "تتبع إرسال النموذج"
+
+#: admin/adt-settings-functions.php:52
+msgid "Form Vendor Tracking"
+msgstr "نموذج تتبع الموردين"
+
+#: admin/adt-settings-functions.php:53
+msgid "Hashed User ID"
+msgstr "معرّف المستخدم المجزأ"
+
+#: admin/adt-settings-functions.php:54
+msgid "View Item"
+msgstr "مشاهدة العناصر"
+
+#: admin/adt-settings-functions.php:55
+msgid "View Item List"
+msgstr "عرض قائمة العناصر"
+
+#: admin/adt-settings-functions.php:56
+msgid "Product Clicks"
+msgstr "نقرات المنتج"
+
+#: admin/adt-settings-functions.php:57
+msgid "Add to Cart"
+msgstr "اضف للسلة"
+
+#: admin/adt-settings-functions.php:58
+msgid "Remove from Cart"
+msgstr "حذف من سلة التسوق"
+
+#: admin/adt-settings-functions.php:59
+msgid "Begin Checkout"
+msgstr "بدء عملية الدفع"
+
+#: admin/adt-settings-functions.php:60
+msgid "Purchase"
+msgstr "شراء"
+
+#: admin/adt-settings-functions.php:61
+msgid "Refund"
+msgstr "إعادة المبلغ"
+
+#: admin/adt-settings-functions.php:62
+msgid "Consent Change"
+msgstr "تغيير الموافقة"
+
+#: admin/adt-settings-functions.php:63
+msgid "Consent Manager Loaded"
+msgstr "تم تحميل مدير الموافقة"
+
+#: admin/adt-settings-functions.php:64
+msgid "Consent Granted"
+msgstr "الموافقة الممنوحة"
+
+#: admin/adt-settings-functions.php:65
+msgid "Consent Revoked"
+msgstr "إلغاء الموافقة"
+
+#: admin/adt-settings-functions.php:66
+msgid "Page View Event"
+msgstr "حدث عرض الصفحة"
+
+#: admin/adt-settings-functions.php:67
+msgid "Session Engagement Milestones"
+msgstr "معالم المشاركة في الجلسات"
+
+#: admin/adt-settings-functions.php:68
+msgid "Session Engagement Summary"
+msgstr "ملخص المشاركة في الجلسة"
+
+#: admin/adt-settings-functions.php:69
+msgid "Session Content Summary"
+msgstr "ملخص محتوى الجلسة"
+
+#: admin/adt-settings-functions.php:70
+msgid "Session Attribution Summary"
+msgstr "ملخص إسناد الجلسة"
+
+#: admin/adt-settings-functions.php:71
+msgid "Session Page Summary"
+msgstr "ملخص صفحة الجلسة"
+
+#: admin/adt-settings-functions.php:72
+msgid "Session Video Summary"
+msgstr "ملخص فيديو الجلسة"
+
+#: admin/adt-settings-functions.php:73
+msgid "Session Commerce Summary"
+msgstr "ملخص الجلسة التجارية"
+
+#: admin/adt-settings-functions.php:110
+msgid "Feature Selection"
+msgstr "اختيار الميزات"
+
+#: admin/adt-settings-functions.php:112
+msgid "- Add/Remove Features"
+msgstr "- إضافة/إزالة ميزات"
+
+#: admin/adt-settings-functions.php:120
+msgid "Select All"
+msgstr "تحديد الكل"
+
+#: admin/adt-settings-functions.php:123
+msgid "Select None"
+msgstr "اختر لا شيء"
+
+#: admin/adt-settings-functions.php:391
+msgid "Please select at least one feature to export."
+msgstr "يرجى تحديد ميزة واحدة على الأقل للتصدير."
+
+#: admin/adt-settings-functions.php:420
+msgid "Download started..."
+msgstr "بدأ التنزيل..."
+
+#: admin/adt-settings-functions.php:430
+msgid "Please select at least one feature to preview."
+msgstr "يرجى تحديد ميزة واحدة على الأقل لمعاينتها."
+
+#: admin/adt-settings-functions.php:434
+msgid "Loading..."
+msgstr "جار التحميل..."
+
+#: admin/adt-settings-functions.php:461
+msgid "Preview generated successfully"
+msgstr "تم إنشاء المعاينة بنجاح"
+
+#: admin/adt-settings-functions.php:479
+msgid "Preview failed"
+msgstr "فشلت المعاينة"
+
+#: admin/adt-settings-functions.php:485
+msgid "Request failed"
+msgstr "فشل الطلب"
+
+#: admin/adt-settings-functions.php:488
+msgid "Preview"
+msgstr "معاينة"
+
+#: admin/adt-settings-functions.php:905
+msgid "Don't forget to click Preview Export to apply your changes."
+msgstr "لا تنس النقر على معاينة تصدير لتطبيق التغييرات التي أجريتها."
+
+#: admin/adt-settings-functions.php:914
+msgid "Preview Export"
+msgstr "معاينة التصدير"
+
+#: admin/adt-settings-functions.php:920
+msgid "Export to GTM"
+msgstr "التصدير إلى GTM"
+
+#: admin/adt-settings-functions.php:930 admin/adt-settings-page.php:149
+#: admin/adt-settings-page.php:195 admin/adt-settings-page.php:199
+msgid "Copy JSON"
+msgstr "نسخ JSON"
+
+#: admin/adt-settings-functions.php:935
+msgid "Summary (TXT)"
+msgstr "ملخص (TXT)"
+
+#: admin/adt-settings-functions.php:940
+msgid "Summary (CSV)"
+msgstr "ملخص (CSV)"
+
+#: admin/adt-settings-functions.php:998
+msgid "Summary"
+msgstr "ملخص"
+
+#: admin/adt-settings-functions.php:1144
+msgid "Export History"
+msgstr "تصدير سجل التاريخ"
+
+#: admin/adt-settings-functions.php:1157
+msgid "Clear History"
+msgstr "مسح التاريخ"
+
+#: admin/adt-settings-functions.php:1166
+msgid "Download CSV"
+msgstr "تحميل ملف CSV"
+
+#: admin/adt-settings-page.php:150 admin/adt-settings-page.php:207
+msgid "Collapse Preview"
+msgstr "معاينة الانهيار"
+
+#: admin/adt-settings-page.php:173
+msgid "✓ Valid JSON"
+msgstr "✓ JSON صالح"
+
+#: admin/adt-settings-page.php:180
+msgid "⚠ Invalid JSON: "
+msgstr "⚠ JSON غير صالح:"
+
+#: admin/adt-settings-page.php:194
+msgid "Copied!"
+msgstr "نسخ!"
+
+#: admin/adt-settings-page.php:198
+msgid "Copy failed"
+msgstr "فشل النسخ"
+
+#: admin/adt-settings-page.php:208
+msgid "Expand Preview"
+msgstr "توسيع المعاينة"
+
+#: admin/adt-settings-page.php:276 admin/adt-settings-register.php:192
+msgid "Page Context"
+msgstr "سياق الصفحة"
+
+#: admin/adt-settings-page.php:277 admin/adt-settings-register.php:193
+msgid "Device Info"
+msgstr "معلومات الجهاز"
+
+#: admin/adt-settings-page.php:278 admin/adt-settings-register.php:194
+msgid "User & Identity"
+msgstr "المستخدم والهوية"
+
+#: admin/adt-settings-page.php:279 admin/adt-settings-register.php:195
+msgid "Metadata Tracking"
+msgstr "تتبع البيانات الوصفية"
+
+#: admin/adt-settings-page.php:280 admin/adt-settings-register.php:196
+msgid "Interaction Tracking"
+msgstr "تتبع التفاعل"
+
+#: admin/adt-settings-page.php:281 admin/adt-settings-register.php:197
+msgid "Engagement Signals"
+msgstr "إشارات المشاركة"
+
+#: admin/adt-settings-page.php:283 admin/adt-settings-register.php:199
+msgid "Integrations"
+msgstr "التكاملات"
+
+#: admin/adt-settings-page.php:284 admin/adt-settings-register.php:200
+msgid "Advertising Pixels"
+msgstr "بكسلات الإعلانات"
+
+#: admin/adt-settings-page.php:285 admin/adt-settings-register.php:201
+msgid "Server-Side Tracking"
+msgstr "التتبع من جانب الخادم"
+
+#: admin/adt-settings-page.php:286
+msgid "Advanced Settings"
+msgstr "اعدادات متقدمة"
+
+#: admin/adt-settings-page.php:287 admin/adt-settings-register.php:203
+msgid "Debug Options"
+msgstr "خيارات تصحيح الأخطاء"
+
+#: admin/adt-settings-page.php:295 admin/adt-settings-register.php:204
+msgid "GTM Exporter"
+msgstr "مُصدِّر GTM"
+
+#: admin/adt-settings-page.php:302
+msgid "Advanced DataLayer Tracker Settings"
+msgstr "إعدادات تعقب طبقة البيانات المتقدمة"
+
+#: admin/adt-settings-page.php:313
+msgid "New:"
+msgstr "جديد:"
+
+#: admin/adt-settings-page.php:314
+msgid "Dual Pixel Dispatch Mode is now available."
+msgstr "وضع الإرسال ثنائي البكسل متاح الآن."
+
+#: admin/adt-settings-page.php:315
+msgid ""
+"Enable it in the Integrations tab to use both GTM and plugin-side pixels "
+"simultaneously."
+msgstr ""
+"قم بتمكينه في علامة تبويب التكاملات لاستخدام كل من GTM والبكسلات من جانب "
+"الإضافة في نفس الوقت."
+
+#: admin/adt-settings-page.php:583
+msgid "Error: UI renderer function missing."
+msgstr "خطأ: دالة عارض واجهة المستخدم مفقودة."
+
+#: admin/adt-settings-page.php:586
+msgid "Error: Export logic file not found."
+msgstr "خطأ: ملف منطق التصدير غير موجود."
+
+#: admin/adt-settings-page.php:592
+msgid "GTM Export is a Pro feature."
+msgstr "تصدير GTM هو خاصية Pro."
+
+#: admin/adt-settings-page.php:593
+msgid "Upgrade to unlock one-click GTM export with all active settings."
+msgstr "قم بالترقية لفتح تصدير GTM بنقرة واحدة مع جميع الإعدادات النشطة."
+
+#: admin/adt-settings-page.php:644 admin/adt-settings-page.php:796
+msgid "Expand All"
+msgstr "توسيع الكل"
+
+#: admin/adt-settings-page.php:652
+msgid "Import / Export Settings"
+msgstr "إعدادات الاستيراد/التصدير"
+
+#: admin/adt-settings-page.php:662
+msgid "Import"
+msgstr "استيراد"
+
+#: admin/adt-settings-page.php:666
+msgid "Export Current Settings"
+msgstr "تصدير الاعدادت الحاليه"
+
+#: admin/adt-settings-page.php:673
+msgid "Import/Export Settings"
+msgstr "إعدادات الاستيراد / التصدير"
+
+#: admin/adt-settings-page.php:674
+msgid "is a premium feature."
+msgstr "ميزة مميزة."
+
+#: admin/adt-settings-page.php:676
+msgid "Upgrade to unlock this functionality."
+msgstr "قم بالترقية لفتح هذه الوظيفة."
+
+#: admin/adt-settings-page.php:686
+msgid "Field Mapping Debug Tool"
+msgstr "أداة تصحيح الخرائط الميدانية"
+
+#: admin/adt-settings-page.php:690
+msgid ""
+"This tool helps verify your Marketo, HubSpot, and other form‑field mappings."
+msgstr ""
+"تساعد هذه الأداة في التحقق من Marketo و HubSpot وتعيينات حقول النماذج الأخرى."
+
+#: admin/adt-settings-page.php:693
+msgid "Run Field Debug"
+msgstr "تشغيل التصحيح الميداني"
+
+#: admin/adt-settings-page.php:708
+msgid "Danger Zone"
+msgstr "منطقة الخطر"
+
+#: admin/adt-settings-page.php:712
+msgid ""
+"Reset all ADT settings to their default values. This action will remove all "
+"your custom configurations."
+msgstr ""
+"إعادة تعيين جميع إعدادات ADT إلى قيمها الافتراضية. سيؤدي هذا الإجراء إلى "
+"إزالة جميع تكويناتك المخصصة."
+
+#: admin/adt-settings-page.php:721
+msgid "Reset All to Defaults"
+msgstr "إعادة تعيين الكل إلى الإعدادات الافتراضية"
+
+#: admin/adt-settings-page.php:724
+msgid "⚠️ This cannot be undone"
+msgstr "⚠️ هذا لا يمكن التراجع عنه"
+
+#: admin/adt-settings-page.php:729
+msgid "Pro Tip:"
+msgstr "نصيحة محترف:"
+
+#: admin/adt-settings-page.php:730
+msgid ""
+"Export your current settings before resetting, so you can restore them later "
+"if needed."
+msgstr ""
+"قم بتصدير إعداداتك الحالية قبل إعادة التعيين، حتى تتمكن من استعادتها لاحقًا "
+"إذا لزم الأمر."
+
+#: admin/adt-settings-page.php:797
+msgid "Collapse All"
+msgstr "طي الكل"
+
+#: admin/adt-settings-page.php:1043
+msgid "Made by"
+msgstr "صُنع بواسطة"
+
+#: admin/adt-settings-page.php:1046
+msgid "Documentation"
+msgstr "الوثائق"
+
+#: admin/adt-settings-page.php:1048
+msgid "Support"
+msgstr "الدعم"
+
+#: admin/adt-settings-register.php:202
+msgid "Advanced Options"
+msgstr "خيارات متقدمة"
+
+#: admin/adt-settings-register.php:222
+msgid "BASIC PAGE IDENTIFIERS"
+msgstr "معرّفات الصفحات الأساسية"
+
+#: admin/adt-settings-register.php:228
+msgid "Include Page Type"
+msgstr "تضمين نوع الصفحة"
+
+#: admin/adt-settings-register.php:229
+msgid ""
+"Adds the current page type (e.g., single, archive, front_page) to the "
+"dataLayer."
+msgstr ""
+"يضيف نوع الصفحة الحالية (على سبيل المثال، صفحة مفردة، أرشيف، صفحة_أمامية، "
+"صفحة_أمامية، صفحة أمامية) إلى طبقة البيانات."
+
+#: admin/adt-settings-register.php:235
+msgid "Include Post ID"
+msgstr "تضمين معرف المشاركة"
+
+#: admin/adt-settings-register.php:236
+msgid "Adds the WordPress post ID to the dataLayer when available."
+msgstr "يضيف معرّف منشور ووردبريس إلى طبقة البيانات عند توفره."
+
+#: admin/adt-settings-register.php:242
+msgid "Include Page Title"
+msgstr "تضمين عنوان الصفحة"
+
+#: admin/adt-settings-register.php:243
+msgid "Includes the document title (from `document.title`) in the dataLayer."
+msgstr "تضمين عنوان المستند (من \"عنوان المستند\") في طبقة البيانات."
+
+#: admin/adt-settings-register.php:249
+msgid "Include Template"
+msgstr "تضمين القالب"
+
+#: admin/adt-settings-register.php:250
+msgid ""
+"Includes the active WordPress page template (e.g., `page-home.php`) if "
+"available."
+msgstr ""
+"يتضمن قالب صفحة ووردبريس النشط (على سبيل المثال، 'page-home.php') إذا كان "
+"متاحًا."
+
+#: admin/adt-settings-register.php:256
+msgid "URL COMPONENTS"
+msgstr "مكونات الرابط"
+
+#: admin/adt-settings-register.php:262
+msgid "Include Page URL"
+msgstr "تضمين عنوان URL للصفحة"
+
+#: admin/adt-settings-register.php:263
+msgid "Includes the full canonical URL of the current page."
+msgstr "يتضمن عنوان URL الأساسي الكامل للصفحة الحالية."
+
+#: admin/adt-settings-register.php:269
+msgid "Include Slug"
+msgstr "تضمين سبيكة"
+
+#: admin/adt-settings-register.php:270
+msgid "Adds the post/page slug (last part of the URL) to the dataLayer."
+msgstr ""
+"يضيف سبيكة المنشور/الصفحة (الجزء الأخير من عنوان URL) إلى طبقة البيانات."
+
+#: admin/adt-settings-register.php:276
+msgid "Include Path"
+msgstr "تضمين المسار"
+
+#: admin/adt-settings-register.php:277
+msgid ""
+"Adds the path portion of the URL (e.g., `/products/shoes`) to the dataLayer."
+msgstr ""
+"يضيف جزء المسار من عنوان URL (على سبيل المثال، \"المنتجات/الأحذية\") إلى "
+"طبقة البيانات."
+
+#: admin/adt-settings-register.php:283
+msgid "CONTENT TAXONOMY"
+msgstr "تصنيف المحتوى"
+
+#: admin/adt-settings-register.php:289
+msgid "Include Post Categories"
+msgstr "تضمين فئات المشاركات"
+
+#: admin/adt-settings-register.php:290
+msgid "Adds a list of post categories (if any) to the dataLayer."
+msgstr "يضيف قائمة بفئات المنشورات (إن وجدت) إلى طبقة البيانات."
+
+#: admin/adt-settings-register.php:296
+msgid "Include Post Tags"
+msgstr "تضمين علامات المشاركة"
+
+#: admin/adt-settings-register.php:297
+msgid "Adds post tags to the dataLayer for content classification."
+msgstr "يضيف علامات النشر إلى طبقة البيانات لتصنيف المحتوى."
+
+#: admin/adt-settings-register.php:303
+msgid "Traffic Source"
+msgstr "مصدر حركة المرور"
+
+#: admin/adt-settings-register.php:309
+msgid "Include Referrer URL"
+msgstr "تضمين عنوان URL المُحيل"
+
+#: admin/adt-settings-register.php:310
+msgid "Includes the `document.referrer` value for attribution tracking."
+msgstr "يتضمن قيمة 'docment.referrer' لتتبع الإسناد."
+
+#: admin/adt-settings-register.php:320
+msgid "Display Information"
+msgstr "معلومات العرض"
+
+#: admin/adt-settings-register.php:326
+msgid "Screen Resolution"
+msgstr "دقة الشاشة"
+
+#: admin/adt-settings-register.php:327
+msgid "Include the user's screen width and height in the dataLayer."
+msgstr "تضمين عرض شاشة المستخدم وارتفاعها في طبقة البيانات."
+
+#: admin/adt-settings-register.php:333
+msgid "Location & Language"
+msgstr "الموقع واللغة"
+
+#: admin/adt-settings-register.php:339
+msgid "Timezone Offset"
+msgstr "إزاحة المنطقة الزمنية"
+
+#: admin/adt-settings-register.php:340
+msgid "Track the user's timezone offset from UTC to help infer region."
+msgstr ""
+"تتبع إزاحة المنطقة الزمنية للمستخدم من التوقيت العالمي المنسق UTC للمساعدة "
+"في استنتاج المنطقة."
+
+#: admin/adt-settings-register.php:346
+msgid "Browser Language"
+msgstr "لغة المتصفح"
+
+#: admin/adt-settings-register.php:347
+msgid "Capture the preferred browser language of the user (e.g., en-US)."
+msgstr "التقط لغة المتصفح المفضلة للمستخدم (على سبيل المثال، en-US)."
+
+#: admin/adt-settings-register.php:357
+msgid "Basic User Information"
+msgstr "معلومات المستخدم الأساسية"
+
+#: admin/adt-settings-register.php:363
+msgid "Include User Info"
+msgstr "تضمين معلومات المستخدم"
+
+#: admin/adt-settings-register.php:364
+msgid "Adds basic WordPress user data like login status, ID, and role."
+msgstr ""
+"يضيف بيانات مستخدم ووردبريس الأساسية مثل حالة تسجيل الدخول والمعرف والدور."
+
+#: admin/adt-settings-register.php:370
+msgid "Include WordPress Flags"
+msgstr "تضمين أعلام ووردبريس"
+
+#: admin/adt-settings-register.php:371
+msgid ""
+"Tracks WordPress-specific flags like whether the current user is an admin or "
+"editor."
+msgstr ""
+"يتتبع العلامات الخاصة بـ WordPress مثل ما إذا كان المستخدم الحالي مسؤولاً أو "
+"محرراً."
+
+#: admin/adt-settings-register.php:377
+msgid "Anonymous User Identification"
+msgstr "تحديد هوية المستخدم المجهول"
+
+#: admin/adt-settings-register.php:378
+msgid ""
+"Privacy-safe user tracking using hashed IDs instead of personally "
+"identifiable information."
+msgstr ""
+"تتبع المستخدم الآمن من حيث الخصوصية باستخدام معرّفات مجزأة بدلاً من معلومات "
+"التعريف الشخصية."
+
+#: admin/adt-settings-register.php:383
+msgid "Include Hashed User ID"
+msgstr "تضمين معرف المستخدم المجزأ"
+
+#: admin/adt-settings-register.php:384
+msgid ""
+"Adds a non-reversible hashed version of the user ID for anonymous tracking."
+msgstr "يضيف نسخة مجزأة غير قابلة للعكس من معرف المستخدم للتتبع المجهول."
+
+#: admin/adt-settings-register.php:390
+msgid "User Hashing Mode"
+msgstr "وضع تجزئة المستخدم"
+
+#: admin/adt-settings-register.php:391
+msgid ""
+"Choose how user IDs are hashed when included. Salted modes enhance privacy."
+msgstr ""
+"اختر كيفية تجزئة معرّفات المستخدمين عند تضمينها. تعمل الأوضاع المملحة على "
+"تعزيز الخصوصية."
+
+#: admin/adt-settings-register.php:394
+msgid "None (do not include user hash)"
+msgstr "لا يوجد (لا تتضمن تجزئة المستخدم)"
+
+#: admin/adt-settings-register.php:395
+msgid "Deterministic (same hash across sessions)"
+msgstr "حتمية (نفس التجزئة عبر الجلسات)"
+
+#: admin/adt-settings-register.php:396
+msgid "Salted Daily"
+msgstr "مملح يومياً"
+
+#: admin/adt-settings-register.php:397
+msgid "Salted Per Session"
+msgstr "مملح لكل جلسة"
+
+#: admin/adt-settings-register.php:403
+msgid "Persist hashed ID in cookie"
+msgstr "استمرار المعرف المجزأ في ملف تعريف الارتباط"
+
+#: admin/adt-settings-register.php:404
+msgid ""
+"Store hashed user ID in a cookie (adt_hashed_id) for cross-domain reuse."
+msgstr ""
+"قم بتخزين معرّف المستخدم المجزأ في ملف تعريف ارتباط (adt_hashed_id) لإعادة "
+"الاستخدام عبر النطاقات."
+
+#: admin/adt-settings-register.php:414
+msgid "Campaign Attribution"
+msgstr "إسناد الحملة"
+
+#: admin/adt-settings-register.php:415
+msgid ""
+"Track UTM parameters and campaign data for marketing attribution analysis."
+msgstr "تتبع معلمات UTM وبيانات الحملة لتحليل الإسناد التسويقي."
+
+#: admin/adt-settings-register.php:420
+msgid "Capture UTM Parameters"
+msgstr "التقاط معلمات UTM"
+
+#: admin/adt-settings-register.php:421
+msgid ""
+"Automatically captures and stores UTM parameters for campaign attribution."
+msgstr "التقاط معلمات UTM وتخزينها تلقائيًا لإسناد الحملة."
+
+#: admin/adt-settings-register.php:428
+msgid "Cookie Tracking"
+msgstr "تتبع ملفات تعريف الارتباط"
+
+#: admin/adt-settings-register.php:434
+msgid "Include Specific Cookies"
+msgstr "تضمين ملفات تعريف الارتباط المحددة"
+
+#: admin/adt-settings-register.php:435
+msgid ""
+"Lets you expose selected cookies to the dataLayer using the `cookie_list` "
+"field."
+msgstr ""
+"يتيح لك تعريض ملفات تعريف الارتباط المحددة لطبقة البيانات باستخدام حقل "
+"\"قائمة_ملفات تعريف الارتباط\"."
+
+#: admin/adt-settings-register.php:441
+msgid "Cookie Name Regex"
+msgstr "اسم ملف تعريف الارتباط Regex"
+
+#: admin/adt-settings-register.php:442
+msgid ""
+"Only cookie names matching this JavaScript RegExp will be included (used for "
+"auto-discovery and enrichment)."
+msgstr ""
+"سيتم تضمين أسماء ملفات تعريف الارتباط المطابقة لـ JavaScript RegExp فقط "
+"(تُستخدم للاكتشاف التلقائي والإثراء)."
+
+#: admin/adt-settings-register.php:449
+msgid "Cookie Names to Include"
+msgstr "أسماء ملفات تعريف الارتباط التي يجب تضمينها"
+
+#: admin/adt-settings-register.php:450
+msgid ""
+"Comma-separated list of cookie names to expose in the dataLayer if enabled."
+msgstr ""
+"قائمة مفصولة بفاصلة بأسماء ملفات تعريف الارتباط المراد عرضها في طبقة "
+"البيانات في حالة تمكينها."
+
+#: admin/adt-settings-register.php:460
+msgid "Click Tracking"
+msgstr "تتبع النقرات"
+
+#: admin/adt-settings-register.php:467
+msgid "Automatically track clicks on links, buttons, and inputs."
+msgstr "تتبع النقرات على الروابط والأزرار والمدخلات تلقائيًا."
+
+#: admin/adt-settings-register.php:473
+msgid "Include Click Metadata"
+msgstr "تضمين النقر فوق البيانات الوصفية"
+
+#: admin/adt-settings-register.php:474
+msgid "Adds metadata like element ID, tag name, and text to click events."
+msgstr ""
+"يضيف بيانات التعريف مثل معرف العنصر واسم العلامة والنص إلى أحداث النقر."
+
+#: admin/adt-settings-register.php:480
+msgid "Form Interaction Tracking"
+msgstr "تتبع تفاعل النماذج"
+
+#: admin/adt-settings-register.php:481
+msgid ""
+"Track user engagement with form fields to identify friction points and "
+"optimize conversion."
+msgstr ""
+"تتبع تفاعل المستخدم مع حقول النماذج لتحديد نقاط الاحتكاك وتحسين التحويل."
+
+#: admin/adt-settings-register.php:486
+msgid "Track Form Field Interactions"
+msgstr "التفاعلات الميدانية على المضمار"
+
+#: admin/adt-settings-register.php:487
+msgid "Track when users interact with form fields."
+msgstr "تتبع متى يتفاعل المستخدمون مع حقول النموذج."
+
+#: admin/adt-settings-register.php:501
+msgid "Form Vendor Detection"
+msgstr "نموذج الكشف عن البائعين"
+
+#: admin/adt-settings-register.php:507
+msgid "Track Marketo, HubSpot, and Gravity Forms"
+msgstr "تتبع نماذج Marketo و HubSpot و Gravity Forms"
+
+#: admin/adt-settings-register.php:508
+msgid ""
+"Automatically pushes form_submit events for supported vendor forms using "
+"built-in selectors."
+msgstr ""
+"يدفع أحداث form_submit_submit تلقائيًا لنماذج الموردين المدعومة باستخدام "
+"محددات مدمجة."
+
+#: admin/adt-settings-register.php:515
+msgid "Form Vendor Tracking Mode"
+msgstr "نموذج وضع تتبع الموردين"
+
+#: admin/adt-settings-register.php:516
+msgid ""
+"Static Map uses predefined CSS selectors for known form vendors (Marketo, "
+"HubSpot, Gravity Forms). Auto-Detect analyzes form attributes to identify "
+"vendors dynamically."
+msgstr ""
+"تستخدم الخريطة الثابتة محددات CSS المحددة مسبقًا لموردي النماذج المعروفين "
+"(Marketo و HubSpot و Gravity Forms). يقوم الاكتشاف التلقائي بتحليل سمات "
+"النموذج لتحديد البائعين ديناميكيًا."
+
+#: admin/adt-settings-register.php:519
+msgid "Static Map (Recommended)"
+msgstr "خريطة ثابتة (موصى بها)"
+
+#: admin/adt-settings-register.php:520
+msgid "Auto-Detect (Beta)"
+msgstr "الكشف التلقائي (بيتا)"
+
+#: admin/adt-settings-register.php:531
+msgid "Scroll Tracking"
+msgstr "تتبع التمرير"
+
+#: admin/adt-settings-register.php:537
+msgid "Track Scroll Depth"
+msgstr "عمق تمرير المسار"
+
+#: admin/adt-settings-register.php:538
+msgid "Pushes maximum scroll percentage reached during the session."
+msgstr "يدفع الحد الأقصى لنسبة التمرير التي تم الوصول إليها أثناء الجلسة."
+
+#: admin/adt-settings-register.php:544
+msgid "Scroll Event Mode"
+msgstr "وضع حدث التمرير"
+
+#: admin/adt-settings-register.php:545
+msgid ""
+"Choose how scroll events are dispatched. \"Depth\" mode is recommended for "
+"GTM users."
+msgstr "اختر كيفية إرسال أحداث التمرير. يوصى بوضع \"العمق\" لمستخدمي GTM."
+
+#: admin/adt-settings-register.php:548
+msgid "Single Event: scroll_depth (Recommended)"
+msgstr "حدث واحد: scroll_depth (موصى به)"
+
+#: admin/adt-settings-register.php:549
+msgid "Custom Events: scroll_25, scroll_50 (Legacy)"
+msgstr "الأحداث المخصصة: التمرير_25، التمرير_50 (قديم)"
+
+#: admin/adt-settings-register.php:550
+msgid "IntersectionObserver (Advanced)"
+msgstr "مراقب التقاطع (متقدم)"
+
+#: admin/adt-settings-register.php:556
+msgid "Track scrollBackUp"
+msgstr "تعقب التمريرالتمرير الخلفي"
+
+#: admin/adt-settings-register.php:557
+msgid "Detect when users scrollBackUp the page."
+msgstr "اكتشف متى يقوم المستخدمون بالتمرير إلى أعلى الصفحة."
+
+#: admin/adt-settings-register.php:563
+msgid "Time & Activity Tracking"
+msgstr "تتبع الوقت والنشاط"
+
+#: admin/adt-settings-register.php:568
+msgid "Active Time (no idle)"
+msgstr "الوقت النشط (بدون خمول)"
+
+#: admin/adt-settings-register.php:569
+msgid ""
+"Tracks time while user is actively interacting (scrolling, moving mouse, "
+"typing)."
+msgstr ""
+"تتبع الوقت أثناء تفاعل المستخدم بنشاط (التمرير، تحريك الفأرة، الكتابة)."
+
+#: admin/adt-settings-register.php:577
+msgid "Track Tab Focus/Blur"
+msgstr "علامة تبويب المسار التركيز/التشويش"
+
+#: admin/adt-settings-register.php:578
+msgid "Track when users switch away from the tab."
+msgstr "تتبع وقت انتقال المستخدمين من علامة التبويب."
+
+#: admin/adt-settings-register.php:584
+msgid "Hover Intent Tracking"
+msgstr "تتبع نوايا التحويم"
+
+#: admin/adt-settings-register.php:590
+msgid "Track Hover Intent"
+msgstr "تتبع نية التحويم"
+
+#: admin/adt-settings-register.php:591
+msgid "Detect when users hover over key elements."
+msgstr "اكتشف عندما يحوم المستخدمون فوق العناصر الرئيسية."
+
+#: admin/adt-settings-register.php:598
+msgid "Hover Intent Cooldown (seconds)"
+msgstr "تهدئة نية التحليق (بالثواني)"
+
+#: admin/adt-settings-register.php:599
+msgid "Minimum time between hover intent events."
+msgstr "الحد الأدنى للوقت بين أحداث نية التحويم."
+
+#: admin/adt-settings-register.php:610
+msgid "Automatic Content Detection"
+msgstr "الكشف التلقائي عن المحتوى"
+
+#: admin/adt-settings-register.php:615
+msgid "Enable Content Intelligence"
+msgstr "تمكين ذكاء المحتوى"
+
+#: admin/adt-settings-register.php:616
+msgid ""
+"Detects if the page contains key content elements (e.g., CTAs, forms, "
+"videos) and flags engagement intent based on structure."
+msgstr ""
+"يكتشف ما إذا كانت الصفحة تحتوي على عناصر محتوى رئيسية (على سبيل المثال، "
+"عبارات الحث على اتخاذ إجراءات، والنماذج، ومقاطع الفيديو) ويحدد نية المشاركة "
+"بناءً على البنية."
+
+#: admin/adt-settings-register.php:624
+msgid "Section-Level Engagement"
+msgstr "المشاركة على مستوى القسم"
+
+#: admin/adt-settings-register.php:625
+msgid ""
+"Track which page sections users engage with and where they spend their time "
+"before exiting."
+msgstr ""
+"تتبع أقسام الصفحة التي يتفاعل معها المستخدمون وأين يقضون وقتهم قبل الخروج "
+"منها."
+
+#: admin/adt-settings-register.php:629
+msgid "Section Engagement Tracking"
+msgstr "تتبُّع مشاركة القسم"
+
+#: admin/adt-settings-register.php:630
+msgid ""
+"Tracks when users engage with specific page sections (requires 3+ seconds "
+"dwell time)."
+msgstr ""
+"تتبّع وقت تفاعل المستخدمين مع أقسام معينة من الصفحة (يتطلب أكثر من 3 ثوانٍ من "
+"وقت المكوث)."
+
+#: admin/adt-settings-register.php:638
+msgid "Pushes the last visible content section before the user exits the page."
+msgstr "يدفع آخر قسم محتوى مرئي قبل خروج المستخدم من الصفحة."
+
+#: admin/adt-settings-register.php:646
+msgid "Content Journey Tracking"
+msgstr "تتبُّع رحلة المحتوى"
+
+#: admin/adt-settings-register.php:652
+msgid "Stores the last detected content type a user engaged with."
+msgstr "يخزن آخر نوع محتوى تم اكتشافه تفاعل معه المستخدم."
+
+#: admin/adt-settings-register.php:664
+msgid "Video Tracking"
+msgstr "تتبع الفيديو"
+
+#: admin/adt-settings-register.php:669
+msgid "Track Video Progress"
+msgstr "تتبع تقدم الفيديو"
+
+#: admin/adt-settings-register.php:670
+msgid "Track video playback milestones."
+msgstr "تتبّع مراحل تشغيل الفيديو."
+
+#: admin/adt-settings-register.php:676
+msgid "WooCommerce Ecommerce Tracking"
+msgstr "تتبُّع التجارة الإلكترونية من WooCommerce"
+
+#: admin/adt-settings-register.php:681
+msgid "Enable WooCommerce Ecommerce Tracking"
+msgstr "تمكين تتبُّع التجارة الإلكترونية من WooCommerce"
+
+#: admin/adt-settings-register.php:682
+msgid ""
+"Fires GA4-compatible ecommerce events like view_item, add_to_cart, purchase, "
+"etc. WooCommerce must be active."
+msgstr ""
+"يُطلق أحداث التجارة الإلكترونية المتوافقة مع GA4 مثل عرض_العنصر، "
+"والإضافة_إلى_سلة التسوق، والشراء، وما إلى ذلك. يجب أن يكون WooCommerce نشطًا."
+
+#: admin/adt-settings-register.php:689
+msgid "Google Tag Manager Integration"
+msgstr "تكامل مدير إشارات Google"
+
+#: admin/adt-settings-register.php:690
+msgid "Configure GTM container deployment and automatic tag generation."
+msgstr "تكوين نشر حاوية GTM وإنشاء العلامات التلقائي."
+
+#: admin/adt-settings-register.php:695
+msgid "Enable GTM Snippet"
+msgstr "تمكين مقتطف GTM"
+
+#: admin/adt-settings-register.php:696
+msgid "Automatically inject the Google Tag Manager snippet into your site."
+msgstr "حقن مقتطف مدير إشارات Google تلقائيًا في موقعك."
+
+#: admin/adt-settings-register.php:702
+msgid "GTM Container ID"
+msgstr "معرّف حاوية GTM"
+
+#: admin/adt-settings-register.php:703
+msgid "Your Google Tag Manager container ID (GTM-XXXXXX)."
+msgstr "معرّف حاوية مدير إشارات Google (GTM-XXXXXXXX)."
+
+#: admin/adt-settings-register.php:709
+msgid "Allow Multiple GTM Containers"
+msgstr "السماح بحاويات GTM المتعددة"
+
+#: admin/adt-settings-register.php:710
+msgid "Allow multiple GTM containers on the same page."
+msgstr "السماح بحاويات GTM متعددة في نفس الصفحة."
+
+#: admin/adt-settings-register.php:716
+msgid "Enable GTM Exporter"
+msgstr "تمكين مُصدِّر GTM"
+
+#: admin/adt-settings-register.php:717
+msgid ""
+"Allows access to a tool that dynamically generates a GTM container based on "
+"selected features."
+msgstr ""
+"يتيح الوصول إلى أداة تقوم ديناميكيًا بإنشاء حاوية GTM استنادًا إلى ميزات محددة."
+
+#: admin/adt-settings-register.php:724
+msgid "Group Export by Category"
+msgstr "تصدير المجموعة حسب الفئة"
+
+#: admin/adt-settings-register.php:725
+msgid "Organize GTM export tags by feature category."
+msgstr "تنظيم علامات تصدير GTM حسب فئة الميزة."
+
+#: admin/adt-settings-register.php:732
+msgid "Enrich GA4 tags"
+msgstr "إثراء علامات GA4"
+
+#: admin/adt-settings-register.php:733
+msgid ""
+"Includes brand, category, SKU, variant, and tag metadata in GA4 "
+"eventParameters."
+msgstr ""
+"يتضمن بيانات تعريف العلامة التجارية، والفئة، ووحدة حفظ المخزون (SKU)، "
+"والمتغير، والعلامة الوصفية في معلمات حدث GA4."
+
+#: admin/adt-settings-register.php:744
+msgid "Advertising Pixel Tracking"
+msgstr "تتبع بكسل الإعلانات"
+
+#: admin/adt-settings-register.php:745
+msgid ""
+"Deploy and manage advertising pixels for Meta, TikTok, Google Ads, LinkedIn, "
+"Pinterest, and X (Twitter)."
+msgstr ""
+"نشر وحدات البكسل الإعلانية وإدارتها لكل من Meta وTikTok وإعلانات Google "
+"وإعلانات Google وLinkedIn وPinterest وX (تويتر)."
+
+#: admin/adt-settings-register.php:750
+msgid "Enable Pixel Tracking"
+msgstr "تمكين تتبع البكسل"
+
+#: admin/adt-settings-register.php:751
+msgid ""
+"Enable frontend tracking for supported ad pixels (Meta, TikTok, Google Ads, "
+"LinkedIn, X)."
+msgstr ""
+"تمكين تتبع الواجهة الأمامية لوحدات البكسل الإعلانية المدعومة (Meta وTikTok "
+"وإعلانات Google وLinkedIn وX)."
+
+#: admin/adt-settings-register.php:758
+msgid "Pixel Dispatch Mode"
+msgstr "وضع إرسال البكسل"
+
+#: admin/adt-settings-register.php:765
+msgid ""
+"Choose how advertising pixels fire. Plugin Only is fastest and most "
+"reliable. GTM Only allows non-technical management. Dual Mode fires from "
+"both (use with event mapping to avoid duplicates)."
+msgstr ""
+"اختر كيفية إطلاق وحدات البكسل الإعلانية. البرنامج المساعد فقط هو الأسرع "
+"والأكثر موثوقية. يسمح GTM فقط بالإدارة غير الفنية. الوضع المزدوج يطلق من "
+"كليهما (استخدمه مع تعيين الحدث لتجنب التكرار)."
+
+#: admin/adt-settings-register.php:771
+msgid "Pixel Event Map (JSON)"
+msgstr "خريطة أحداث البكسل (JSON)"
+
+#: admin/adt-settings-register.php:772
+msgid ""
+"Map ADT events to platforms: {\"form_submit\":[\"meta\",\"google\"], "
+"\"purchase\":[\"meta\",\"tiktok\"]}"
+msgstr ""
+"تعيين أحداث ADT إلى المنصات: {\"form_submit\":[\"meta\",\"google\"], "
+"\"purchase\":[\"meta\",\"tiktok\"]}"
+
+#: admin/adt-settings-register.php:779
+msgid "Enable Dual Pixel Dispatch (Plugin + GTM)"
+msgstr "تمكين الإرسال ثنائي البكسل (المكون الإضافي + GTM)"
+
+#: admin/adt-settings-register.php:780
+msgid ""
+"Fires pixels via both GTM container tags and plugin-side JS. Useful if GTM "
+"does not cover all payloads."
+msgstr ""
+"يطلق وحدات البكسل عبر كل من علامات حاوية GTM و JS من جانب الإضافة. مفيد إذا "
+"كانت GTM لا تغطي جميع الحمولات."
+
+#: admin/adt-settings-register.php:787
+msgid "Pixel Platform Configuration"
+msgstr "تكوين منصة البكسل"
+
+#: admin/adt-settings-register.php:793
+msgid "Enable Meta Pixel"
+msgstr "تمكين Meta Pixel"
+
+#: admin/adt-settings-register.php:799
+msgid "Meta Pixel ID"
+msgstr "معرّف التعريف بكسل التعريف"
+
+#: admin/adt-settings-register.php:807
+msgid "Enable TikTok Pixel"
+msgstr "تمكين TikTok Pixel"
+
+#: admin/adt-settings-register.php:813
+msgid "TikTok Pixel ID"
+msgstr "معرف تيك توك بكسل تيك توك"
+
+#: admin/adt-settings-register.php:821
+msgid "Enable Google Ads Tag"
+msgstr "تمكين علامة إعلانات Google"
+
+#: admin/adt-settings-register.php:827
+msgid "Google Ads Conversion ID"
+msgstr "معرّف التحويل في إعلانات Google"
+
+#: admin/adt-settings-register.php:835
+msgid "Enable X (Twitter) Pixel"
+msgstr "تمكين X (تويتر) بكسل"
+
+#: admin/adt-settings-register.php:841
+msgid "X (Twitter) Pixel ID"
+msgstr "X (تويتر) معرف البكسل"
+
+#: admin/adt-settings-register.php:849
+msgid "Enable LinkedIn Insight Tag"
+msgstr "تمكين علامة LinkedIn Insight Tag"
+
+#: admin/adt-settings-register.php:855
+msgid "LinkedIn Partner ID"
+msgstr "معرّف شريك لينكد إن إن"
+
+#: admin/adt-settings-register.php:863
+msgid "LinkedIn Form Submit Conversion ID"
+msgstr "نموذج LinkedIn إرسال معرف التحويل إلى لينكد إن إن"
+
+#: admin/adt-settings-register.php:864
+msgid "Optional conversion tracking ID for form submissions."
+msgstr "معرّف تتبع التحويل الاختياري لعمليات إرسال النماذج."
+
+#: admin/adt-settings-register.php:870
+msgid "LinkedIn Purchase Conversion ID"
+msgstr "معرّف تحويل الشراء على LinkedIn"
+
+#: admin/adt-settings-register.php:871
+msgid "Optional conversion tracking ID for purchases."
+msgstr "معرّف تتبع التحويل الاختياري للمشتريات."
+
+#: admin/adt-settings-register.php:879
+msgid "Enable Pinterest Tag"
+msgstr "تمكين علامة بينتيريست"
+
+#: admin/adt-settings-register.php:886
+msgid "Pinterest Tag ID"
+msgstr "معرّف علامة بينتيريست"
+
+#: admin/adt-settings-register.php:897
+msgid "Meta Conversions API (Server-Side)"
+msgstr "واجهة برمجة تطبيقات التحويلات الوصفية (من جانب الخادم)"
+
+#: admin/adt-settings-register.php:898
+msgid ""
+"Send conversion events directly from your server to Meta for improved "
+"tracking accuracy and iOS 14+ resilience."
+msgstr ""
+"أرسل أحداث التحويل مباشرةً من الخادم الخاص بك إلى Meta لتحسين دقة التتبع "
+"ومرونة نظام التشغيل iOS 14+."
+
+#: admin/adt-settings-register.php:903
+msgid "Enable Meta Conversions API"
+msgstr "تمكين واجهة برمجة تطبيقات التحويلات الوصفية"
+
+#: admin/adt-settings-register.php:904
+msgid "Send events server-side to Meta in addition to browser pixel tracking."
+msgstr "إرسال الأحداث من جانب الخادم إلى Meta بالإضافة إلى تتبع بكسل المتصفح."
+
+#: admin/adt-settings-register.php:911
+msgid "Meta CAPI Access Token"
+msgstr "رمز الوصول إلى Meta CAPI المميز"
+
+#: admin/adt-settings-register.php:913
+msgid "Generate in Meta Events Manager → Settings → Conversions API"
+msgstr ""
+"الإنشاء في مدير أحداث التعريف → الإعدادات → واجهة برمجة تطبيقات التحويلات"
+
+#: admin/adt-settings-register.php:923
+msgid "Test Event Code (Optional)"
+msgstr "رمز حدث الاختبار (اختياري)"
+
+#: admin/adt-settings-register.php:924
+msgid "Used for testing events in Meta Events Manager. Remove in production."
+msgstr "يُستخدم لاختبار الأحداث في مدير أحداث التعريف. إزالة في الإنتاج."
+
+#: admin/adt-settings-register.php:932
+msgid "GA4 Measurement Protocol (Server-Side)"
+msgstr "بروتوكول قياس GA4 (من جانب الخادم)"
+
+#: admin/adt-settings-register.php:933
+msgid ""
+"Send events to Google Analytics 4 from your server for complete analytics "
+"coverage."
+msgstr ""
+"أرسل الأحداث إلى Google Analytics 4 من خادمك للحصول على تغطية تحليلية كاملة."
+
+#: admin/adt-settings-register.php:938
+msgid "Enable GA4 Measurement Protocol"
+msgstr "تمكين بروتوكول قياس GA4"
+
+#: admin/adt-settings-register.php:939
+msgid "Send events server-side to GA4 in addition to client-side tracking."
+msgstr ""
+"إرسال الأحداث من جانب الخادم إلى GA4 بالإضافة إلى التتبع من جانب العميل."
+
+#: admin/adt-settings-register.php:946
+msgid "GA4 Measurement ID"
+msgstr "معرّف القياس GA4"
+
+#: admin/adt-settings-register.php:948
+msgid "Find in GA4 → Admin → Data Streams → Your Stream (Format: G-XXXXXXXXXX)"
+msgstr ""
+"ابحث في GA4 ← المسؤول ← تدفقات البيانات ← دفق البيانات ← الدفق الخاص بك "
+"(التنسيق: G-XXXXXXXXXXXX)"
+
+#: admin/adt-settings-register.php:958
+msgid "GA4 API Secret"
+msgstr "سر واجهة برمجة تطبيقات GA4 API"
+
+#: admin/adt-settings-register.php:960
+msgid ""
+"Generate in GA4 → Admin → Data Streams → Your Stream → Measurement Protocol "
+"API secrets"
+msgstr ""
+"توليد في GA4 ← المسؤول ← تدفقات البيانات ← التدفق الخاص بك ← أسرار واجهة "
+"برمجة تطبيقات بروتوكول القياس"
+
+#: admin/adt-settings-register.php:970
+msgid "GA4 Debug Mode"
+msgstr "وضع التصحيح GA4"
+
+#: admin/adt-settings-register.php:971
+msgid "Enable to validate events in GA4 DebugView. Disable in production."
+msgstr "تمكين للتحقق من صحة الأحداث في GA4 DebugView. تعطيل في الإنتاج."
+
+#: admin/adt-settings-register.php:978
+msgid "Enable Dual Tracking (Client + Server)"
+msgstr "تمكين التتبع المزدوج (عميل + خادم)"
+
+#: admin/adt-settings-register.php:979
+msgid ""
+"Send events BOTH to GTM (client-side) AND server-side with deduplication. "
+"Enables GTM tags while maintaining server-side reliability."
+msgstr ""
+"إرسال الأحداث إلى GTM (من جانب العميل) ومن جانب الخادم مع إلغاء الازدواجية. "
+"تمكين علامات GTM مع الحفاظ على الموثوقية من جانب الخادم."
+
+#: admin/adt-settings-register.php:995
+msgid "Session Management"
+msgstr "إدارة الجلسات"
+
+#: admin/adt-settings-register.php:996
+msgid ""
+"Configure how long sessions last and how many events to track in memory."
+msgstr ""
+"قم بتكوين مدة استمرار الجلسات وعدد الأحداث التي سيتم تتبعها في الذاكرة."
+
+#: admin/adt-settings-register.php:1002
+msgid "Session Timeout (Minutes)"
+msgstr "مهلة الجلسة (بالدقائق)"
+
+#: admin/adt-settings-register.php:1003
+msgid ""
+"Controls how long a session lasts before session-based values reset. "
+"Defaults to 30 minutes."
+msgstr ""
+"يتحكم في مدة استمرار جلسة العمل قبل إعادة تعيين القيم المستندة إلى جلسة "
+"العمل. الإعداد الافتراضي هو 30 دقيقة."
+
+#: admin/adt-settings-register.php:1012
+msgid "Event History Limit"
+msgstr "حد تاريخ الحدث"
+
+#: admin/adt-settings-register.php:1013
+msgid "Maximum number of events to keep in memory for overlay rehydration."
+msgstr ""
+"الحد الأقصى لعدد الأحداث التي يجب الاحتفاظ بها في الذاكرة لإعادة ترطيب "
+"التراكب."
+
+#: admin/adt-settings-register.php:1022
+msgid "Consent Management (GDPR/CCPA)"
+msgstr "إدارة الموافقة (GDPR/CCPA)"
+
+#: admin/adt-settings-register.php:1023
+msgid ""
+"Configure privacy compliance settings and integrate with consent management "
+"platforms."
+msgstr "تكوين إعدادات الامتثال للخصوصية والتكامل مع منصات إدارة الموافقة."
+
+#: admin/adt-settings-register.php:1028
+msgid "Preferred CMP Platform"
+msgstr "منصة CMP المفضلة"
+
+#: admin/adt-settings-register.php:1029
+msgid "Choose your consent management platform."
+msgstr "اختر منصة إدارة الموافقة الخاصة بك."
+
+#: admin/adt-settings-register.php:1032
+msgid "Auto-detect"
+msgstr "الكشف التلقائي"
+
+#: admin/adt-settings-register.php:1033
+msgid "CookieYes"
+msgstr "ملف تعريف الارتباطنعم"
+
+#: admin/adt-settings-register.php:1034
+msgid "Cookiebot"
+msgstr "كوكيبوت"
+
+#: admin/adt-settings-register.php:1035
+msgid "Klaro"
+msgstr "كلارو"
+
+#: admin/adt-settings-register.php:1036
+msgid "Complianz"
+msgstr "كومبليانز"
+
+#: admin/adt-settings-register.php:1042
+msgid "CMP Detection Timeout (seconds)"
+msgstr "مهلة اكتشاف CMP (بالثواني)"
+
+#: admin/adt-settings-register.php:1043
+msgid ""
+"How long to wait for consent management platforms to load before using "
+"fallback."
+msgstr ""
+"كم من الوقت يجب الانتظار حتى يتم تحميل منصات إدارة الموافقة قبل استخدام "
+"الاحتياطي."
+
+#: admin/adt-settings-register.php:1052
+msgid "Delay Tracking Until Consent"
+msgstr "تأخير التتبع حتى الموافقة"
+
+#: admin/adt-settings-register.php:1053
+msgid ""
+"(GDPR/CCPA Safe Mode) Prevents tracking until user consent is granted. "
+"Integrates with OneTrust or Cookiebot."
+msgstr ""
+"(الوضع الآمن للائحة العامة لحماية البيانات/اتفاقية حماية البيانات الشخصية "
+"(GDPR/CCPA) يمنع التتبع حتى يتم منح موافقة المستخدم. يتكامل مع OneTrust أو "
+"Cookiebot."
+
+#: admin/adt-settings-register.php:1059
+msgid "Track if No CMP Detected"
+msgstr "التتبع إذا لم يتم اكتشاف أي م.م.م.ب.أ"
+
+#: admin/adt-settings-register.php:1060
+msgid ""
+"Allow tracking when no consent platform is found. <strong>Note:</strong> "
+"Automatically disabled when \"Delay until consent\" is enabled."
+msgstr ""
+"السماح بالتتبع عند عدم وجود منصة موافقة. <strong>ملاحظة:</strong> يتم تعطيله "
+"تلقائيًا عند تمكين \"التأخير حتى الموافقة\"."
+
+#: admin/adt-settings-register.php:1066
+msgid "Require TCF Consent"
+msgstr "طلب موافقة صندوق التعاون التقني"
+
+#: admin/adt-settings-register.php:1067
+msgid ""
+"Only run tracking if TCF consent is granted for every detected vendor "
+"(Google, Meta, TikTok, etc.)."
+msgstr ""
+"تشغيل التتبع فقط إذا تم منح موافقة صندوق التعاون التقني لكل بائع تم اكتشافه "
+"(جوجل، ميتا، تيك توك، إلخ)."
+
+#: admin/adt-settings-register.php:1073
+msgid "Custom Events & Filters"
+msgstr "الأحداث والفلاتر المخصصة"
+
+#: admin/adt-settings-register.php:1074
+msgid "Define custom tracking events and exclude specific pages from tracking."
+msgstr "تحديد أحداث تتبع مخصصة واستبعاد صفحات معينة من التتبع."
+
+#: admin/adt-settings-register.php:1079
+msgid "Custom Events (JSON)"
+msgstr "الأحداث المخصصة (JSON)"
+
+#: admin/adt-settings-register.php:1080
+msgid ""
+"Define additional custom events using JSON (CSS selectors, triggers, etc)."
+msgstr ""
+"حدِّد أحداثًا مخصصة إضافية باستخدام JSON (محددات CSS، والمحفزات، وما إلى ذلك)."
+
+#: admin/adt-settings-register.php:1087
+msgid "Regex Exclude Pattern"
+msgstr "نمط الاستبعاد من Regex"
+
+#: admin/adt-settings-register.php:1088
+msgid ""
+"Exclude pages matching this regex pattern (overrides include). Example: "
+"<code>/checkout/|/cart/|/admin/</code>"
+msgstr ""
+"استبعاد الصفحات المطابقة لنمط الريجكس هذا (يتجاوز التضمين). مثال: <code>/"
+"تشيك أوت/||/سيارة/|/مسؤول/</code>"
+
+#: admin/adt-settings-register.php:1097
+msgid "Console Debugging"
+msgstr "تصحيح أخطاء وحدة التحكم"
+
+#: admin/adt-settings-register.php:1103
+msgid "Enable Debug Mode"
+msgstr "تفعيل وضع التصحيح (Debug Mode)"
+
+#: admin/adt-settings-register.php:1104
+msgid "Show console logs when active."
+msgstr "إظهار سجلات وحدة التحكم عند تنشيطها."
+
+#: admin/adt-settings-register.php:1110
+msgid "Console Log Verbosity"
+msgstr "إسهاب سجل وحدة التحكم"
+
+#: admin/adt-settings-register.php:1111
+msgid ""
+"Control how much detail appears in browser console. Quiet = errors only, "
+"Normal = grouped summaries, Verbose = everything."
+msgstr ""
+"تحكم في مقدار التفاصيل التي تظهر في وحدة تحكم المتصفح. هادئ = الأخطاء فقط، "
+"عادي = ملخصات مجمعة، مطول = كل شيء."
+
+#: admin/adt-settings-register.php:1114
+msgid "Quiet (Errors Only)"
+msgstr "هدوء (أخطاء فقط)"
+
+#: admin/adt-settings-register.php:1115
+msgid "Normal (Grouped)"
+msgstr "عادي (مجمعة)"
+
+#: admin/adt-settings-register.php:1116
+msgid "Verbose (All Logs)"
+msgstr "الإسهاب (جميع السجلات)"
+
+#: admin/adt-settings-register.php:1122
+msgid "Debug Overlay"
+msgstr "تراكب التصحيح"
+
+#: admin/adt-settings-register.php:1128
+msgid "Show Debug Overlay"
+msgstr "إظهار تراكب التصحيح"
+
+#: admin/adt-settings-register.php:1129
+msgid "Adds a floating overlay for inspecting event activity."
+msgstr "يضيف تراكبًا عائمًا لفحص نشاط الحدث."
+
+#: admin/adt-settings-register.php:1135
+msgid "Minimum Role for Overlay"
+msgstr "الحد الأدنى لدور التراكب"
+
+#: admin/adt-settings-register.php:1136
+msgid "Only users with this role or higher can see the debug overlay."
+msgstr "يمكن فقط للمستخدمين الذين لديهم هذا الدور أو أعلى رؤية تراكب التصحيح."
+
+#: admin/adt-settings-register.php:1139
+msgid "Administrator"
+msgstr "المدير"
+
+#: admin/adt-settings-register.php:1140
+msgid "Editor"
+msgstr "المحرر"
+
+#: admin/adt-settings-register.php:1141
+msgid "Author"
+msgstr "الكاتب"
+
+#: admin/adt-settings-register.php:1142
+msgid "Contributor"
+msgstr "مساهم"
+
+#: admin/adt-settings-register.php:1143
+msgid "Subscriber"
+msgstr "مشترك"
+
+#: admin/adt-settings-register.php:1149
+msgid "Blocked Events in Overlay"
+msgstr "الأحداث المحظورة في التراكب"
+
+#: admin/adt-settings-register.php:1150
+msgid ""
+"Display events that are blocked by consent in the overlay (marked with 🚫)"
+msgstr "عرض الأحداث التي تم حظرها بالموافقة في التراكب (مميزة بـ 🚫)"
+
+#: admin/adt-settings-register.php:1156
+msgid "Show Event Filters"
+msgstr "إظهار مرشحات الأحداث"
+
+#: admin/adt-settings-register.php:1157
+msgid "Display the event filters interface in the debug overlay."
+msgstr "عرض واجهة مرشحات الأحداث في تراكب التصحيح."
+
+#: admin/adt-settings-register.php:1162
+msgid "Show Pixels SDK Panel"
+msgstr "لوحة إظهار وحدات البكسل SDK"
+
+#: admin/adt-settings-register.php:1165
+msgid ""
+"Enable a debug-only panel in the overlay to show which pixel SDKs are "
+"detected on the page."
+msgstr ""
+"قم بتمكين لوحة تصحيح الأخطاء فقط في التراكب لإظهار وحدات البكسل SDK المكتشفة "
+"على الصفحة."
+
+#: admin/adt-settings-register.php:1171
+msgid "Show Event Simulator"
+msgstr "عرض محاكي الأحداث"
+
+#: admin/adt-settings-register.php:1172
+msgid "Display the event simulator interface in the debug overlay."
+msgstr "عرض واجهة محاكي الحدث في تراكب التصحيح."
+
+#: admin/adt-settings-register.php:1179
+msgid "Advanced Debug Options"
+msgstr "خيارات التصحيح المتقدمة"
+
+#: admin/adt-settings-register.php:1185
+msgid "Expose `dataLayerBlocked` Global Flag"
+msgstr "فضح العلامة العالمية 'dataLayerBlocked'"
+
+#: admin/adt-settings-register.php:1186
+msgid ""
+"When enabled, a `window.dataLayerBlocked` boolean will be set to indicate if "
+"consent blocks tracking."
+msgstr ""
+"عند التمكين، سيتم تعيين قيمة منطقية 'window.dataLayerBlocked' للإشارة إلى ما "
+"إذا كانت الموافقة تحظر التتبع."
+
+#: admin/adt-settings-register.php:1192
+msgid "Clear dataLayer on Page Load"
+msgstr "مسح طبقة البيانات عند تحميل الصفحة"
+
+#: admin/adt-settings-register.php:1193
+msgid ""
+"Prevents duplicate events by clearing the dataLayer array on each full page "
+"load."
+msgstr ""
+"يمنع تكرار الأحداث عن طريق مسح مصفوفة طبقة البيانات عند كل تحميل صفحة كاملة."
+
+#: includes/adt-frontend-config.php:683
+msgid "Features"
+msgstr "المميزات"
+
+#: includes/adt-frontend-config.php:684
+msgid "Version"
+msgstr "الإصدار"
+
+#: includes/adt-frontend-config.php:685
+msgid "Generated"
+msgstr "أُعِدّة"
+
+#: includes/adt-frontend-config.php:688
+msgid "🗂️ No export history found."
+msgstr "🗂️ لم يتم العثور على سجل التصدير."
+
+#: includes/ajax/adt-ajax-handlers.php:515
+#: includes/ajax/adt-ajax-handlers.php:596
+msgid "You do not have permission to perform this action."
+msgstr "ليس لديك الصلاحية لتنفيذ هذا الإجراء."
+
+#: includes/ajax/adt-ajax-handlers.php:559
+#: includes/ajax/adt-ajax-handlers.php:692
+#, php-format
+msgid "Successfully removed %d orphaned field(s) from the database."
+msgstr "تمت إزالة %d حقل (حقول) يتيمة بنجاح من قاعدة البيانات."
+
+#: includes/ajax/adt-ajax-handlers.php:568
+#: includes/ajax/adt-ajax-handlers.php:698
+msgid "Failed to update settings in database."
+msgstr "فشل تحديث الإعدادات في قاعدة البيانات."
+
+#: includes/ajax/adt-ajax-handlers.php:573
+#: includes/ajax/adt-ajax-handlers.php:702
+msgid "No orphaned fields found. Database is clean!"
+msgstr "لم يتم العثور على حقول يتيمة. قاعدة البيانات نظيفة!"
+
+#: includes/ajax/adt-ajax-handlers.php:592
+msgid "Security check failed"
+msgstr "الفحص الأمني فشل"
+
+#: includes/ajax/adt-ajax-handlers.php:710
+msgid "Settings reset to defaults successfully."
+msgstr "تمت إعادة تعيين الإعدادات إلى الإعدادات الافتراضية بنجاح."

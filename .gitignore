@@ -1,0 +1,31 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Pro add-on lives in a separate repository
+datalayer-tracker-pro/
+build-pro-zip.sh
+
+# Build artifacts
+*.zip
+_dist_test/
+_verify-*.zip
+New Folder With Items/
+
+# Logs / env
+*.log
+error_log
+.env
+.env.local
+
+# Dev tooling (keep scripts/*.js, not dependencies)
+scripts/node_modules/
+scripts/deobfuscated-output/
+
+# WordPress / PHP (if added locally)
+vendor/
+composer.lock

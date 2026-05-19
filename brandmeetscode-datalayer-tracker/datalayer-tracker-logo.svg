@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="DataLayer Tracker">
+  <defs>
+    <linearGradient id="dl_stack7" x1="12%" y1="8%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="55%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect x="26" y="26" width="148" height="148" rx="36" fill="none" stroke="url(#dl_stack7)" stroke-width="10" opacity="0.28"/>
+  <rect x="44" y="44" width="112" height="112" rx="28" fill="none" stroke="url(#dl_stack7)" stroke-width="10" opacity="0.5"/>
+  <rect x="62" y="62" width="76" height="76" rx="20" fill="url(#dl_stack7)" opacity="0.92"/>
+  <circle cx="128" cy="72" r="14" fill="#f97316"/>
+</svg>

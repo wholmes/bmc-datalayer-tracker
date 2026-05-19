@@ -1,0 +1,15 @@
+Copy/paste into your reply to the WordPress Plugin Review email:
+
+---
+
+Please reserve the following slug for my resubmission:
+
+Slug: brandmeetscode-datalayer-tracker
+Display name: BrandMeetsCode DataLayer Tracker
+Text domain: brandmeetscode-datalayer-tracker
+
+The plugin uses "DataLayer Tracker" in the wp-admin UI (menus and settings); the distinctive BrandMeetsCode prefix is used for the directory listing and plugin header only.
+
+I have uploaded a new version with this slug and text domain in the plugin files.
+
+Thank you,

@@ -1,0 +1,12 @@
+# Patterns excluded by build-free-zip.sh / build-pro-zip.sh (rsync --exclude-from).
+# Paths are relative to the plugin root (brandmeetscode-datalayer-tracker/).
+# Lines starting with # are ignored.
+
+*.zip
+.git/
+.github/
+
+# WordPress.org free build: omit Pro-only admin UI and empty stubs (avoids trialware false positives).
+admin/adt-presets-page.php
+includes/server-side/
+assets/js-obfuscated-backup/
