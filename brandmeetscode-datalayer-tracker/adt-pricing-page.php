@@ -40,11 +40,12 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 			<?php
 			$free_features = [
 				__( 'Page, content &amp; visitor context', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Scroll depth, focus/blur, time-on-page, default clicks', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Engagement — scroll depth, active time, hover intent, video progress, focus/blur, clicks', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Form lifecycle events (view, start, submit, error, abandon)', 'brandmeetscode-datalayer-tracker' ),
-				__( 'GTM snippet output — paste your container ID, done', 'brandmeetscode-datalayer-tracker' ),
+				__( 'WooCommerce GA4-style browser events, cart abandonment &amp; refunds (when WooCommerce is active)', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Client-side sessions &amp; UTM parameters', 'brandmeetscode-datalayer-tracker' ),
+				__( 'GTM snippet output — paste your container ID', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Consent-aware loading &amp; CMP auto-detection', 'brandmeetscode-datalayer-tracker' ),
-				__( 'URL regex exclude list', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Debug overlay (admin-only)', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Settings import / export', 'brandmeetscode-datalayer-tracker' ),
 			];
@@ -93,19 +94,19 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 			<?php echo esc_html__( 'Pro Add-on', 'brandmeetscode-datalayer-tracker' ); ?>
 		</h2>
 		<p style="margin:0 0 20px;color:#646970;font-size:13px;">
-			<?php echo esc_html__( 'Advanced tracking for stores, agencies, and power users.', 'brandmeetscode-datalayer-tracker' ); ?>
+			<?php echo esc_html__( 'Pixels, server-side tracking, GTM export, and modules not included in the free WordPress.org build.', 'brandmeetscode-datalayer-tracker' ); ?>
 		</p>
 		<ul style="margin:0 0 24px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
 			<?php
 			$pro_features = [
-				__( 'WooCommerce GA4-style ecommerce events', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Advertising pixels — Meta, TikTok, Google Ads, LinkedIn, X, Pinterest', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Dual pixel mode (GTM + direct SDKs) &amp; JSON event mapping', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Server-side — Meta CAPI &amp; GA4 Measurement Protocol', 'brandmeetscode-datalayer-tracker' ),
 				__( 'GTM container JSON export (one-click import)', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Advertising pixels — Meta, TikTok, LinkedIn, X, Pinterest, Google Ads', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Server-side tracking — Meta CAPI &amp; GA4 Measurement Protocol', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Active time, hover intent, video milestones', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Content intelligence &amp; session summaries', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Customer segmentation &amp; LTV enrichment', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Priority support', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Preset library for faster site rollout', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Field-level form tracking &amp; form-vendor shortcuts', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Priority email support', 'brandmeetscode-datalayer-tracker' ),
 			];
 			foreach ( $pro_features as $item ) :
 			?>
