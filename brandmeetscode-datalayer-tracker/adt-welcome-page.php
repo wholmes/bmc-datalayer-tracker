@@ -125,7 +125,14 @@ $notices = ob_get_clean();
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
                 </div>
                 <h4>Form Lifecycle Events</h4>
-                <p>Automatic <code>form_view</code>, <code>form_field_start</code>, <code>form_submit</code>, <code>form_error</code>, and <code>form_abandon</code> — no custom code needed.</p>
+                <p>Automatic <code>form_view</code>, <code>form_field_start</code>, <code>form_submit</code>, <code>form_error</code>, and <code>form_abandon</code> when you enable <strong>Field Tracking</strong> or <strong>Form Vendor Detection</strong> in Settings. Optional shortcuts for Gravity Forms, HubSpot, Contact Form 7, WPForms, and more.</p>
+            </div>
+            <div class="adt-welcome-feature">
+                <div class="adt-welcome-feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <h4>WooCommerce GA4 Events</h4>
+                <p>When WooCommerce is active: GA4-style browser events (view_item, add_to_cart, begin_checkout, purchase), cart abandonment, refunds, and customer-type context for your dataLayer.</p>
             </div>
             <div class="adt-welcome-feature">
                 <div class="adt-welcome-feature-icon">
@@ -135,16 +142,16 @@ $notices = ob_get_clean();
                 <p>Real-time on-page panel shows every dataLayer event as it fires, with filtering and blocked-event visibility. Admin-only, never shown to visitors.</p>
             </div>
 
-            <!-- PRO features -->
+            <!-- PRO features (not in WordPress.org build) -->
             <div class="adt-welcome-feature" style="opacity:.85;border:1px dashed #ccc;border-radius:4px;padding:12px;">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
                     <div class="adt-welcome-feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
                     </div>
                     <span style="background:#09ba65;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;white-space:nowrap;">PRO</span>
                 </div>
-                <h4>WooCommerce GA4 Events</h4>
-                <p>Full GA4-style ecommerce payload — view_item, add_to_cart, begin_checkout, purchase &amp; more — with LTV enrichment and customer segmentation.</p>
+                <h4>Advertising Pixels</h4>
+                <p>Meta, TikTok, Google Ads, LinkedIn, X, and Pinterest — direct browser pixels, optional dual mode with GTM, and JSON event mapping.</p>
                 <a href="<?php echo esc_url( $pro_url ); ?>" target="_blank" rel="noopener noreferrer" style="font-size:12px;">Learn more →</a>
             </div>
             <div class="adt-welcome-feature" style="opacity:.85;border:1px dashed #ccc;border-radius:4px;padding:12px;">

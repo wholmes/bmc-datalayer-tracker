@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       BrandMeetsCode DataLayer Tracker
  * Plugin URI:        https://datalayer-tracker.com/knowledge-base/
- * Description:       Professional dataLayer implementation with engagement, ecommerce, and content intelligence tracking
+ * Description:       Consent-aware dataLayer for GTM — engagement, forms, WooCommerce browser events, sessions, and debug overlay. Pro add-on adds pixels, server-side, and GTM export.
  * Version:           1.2.5
  * Requires at least: 5.8
  * Requires PHP:      7.4

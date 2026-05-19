@@ -153,20 +153,17 @@ The **Pro add-on** is a separate product (not in this repository).
   - `consent_denied`
   - `consent_updated`
 
-### 🧠 **Content Intelligence**
-- **Last Content Type Viewed** - Post, page, product, category
-- **Reading Progress** - Scroll-based article completion
-- **Content Interaction** - Links, buttons, media engagement
-- **Dynamic Detection** - Adapts to any theme/builder
+### 🧠 **Content Intelligence** *(Pro add-on — not in WordPress.org build)*
+- Full content-intelligence module, reading progress, and related session summaries ship in the separate Pro plugin.
 
-### 🔧 **Developer Tools**
-- **Debug Overlay** - Visual event inspector
-- **Event Simulator** - Test events without triggering actions
-- **Event Filters** - Real-time event filtering in overlay
-- **SDK Status** - See which pixels loaded successfully
-- **Blocked Events** - View consent-blocked events
-- **Export History** - Track all GTM exports
-- **Settings Import/Export** - JSON configuration backup
+### 🔧 **Developer Tools** *(free build)*
+- **Debug Overlay** — Visual event inspector (admin-only)
+- **Event Filters** — Real-time filtering in the overlay
+- **Blocked Events** — View consent-blocked events
+- **Settings Import/Export** — JSON configuration backup
+- **Event Simulator** — Optional overlay panel (enable in Debug settings)
+
+*Pro add-on also includes: pixel SDK status in overlay, GTM container export, and export history.*
 
 ---
 
@@ -210,13 +207,9 @@ Open **DataLayer Tracker** in the WordPress admin sidebar
   ✓ Time on Page
   ✓ Active Time
   
-✅ Content Intelligence
-  ✓ Last Content Type Viewed
-  ✓ Last Engaged Section
-
 ✅ Form Tracking
-  ✓ Form Submit
-  ✓ Form Vendor Detection
+  ✓ Enable Field Tracking (field-level events)
+  ✓ Form Vendor Detection (optional shortcuts)
 
 ✅ WooCommerce (if installed)
   ✓ Enable Ecommerce Tracking
@@ -224,13 +217,12 @@ Open **DataLayer Tracker** in the WordPress admin sidebar
 
 ### 2. **Configure GTM**
 
-**Option A: Use ADT's GTM Export** *(Recommended)*
-1. Go to **GTM Export** tab
-2. Select features to include
-3. Click **Download GTM Container JSON**
-4. Import into your GTM container
+**Option A: GTM container JSON export** *(Pro add-on)*
+1. Install **DataLayer Tracker Pro** alongside this plugin
+2. Use **GTM Export** to download a pre-built container JSON
+3. Import into your GTM account
 
-**Option B: Manual GTM Setup**
+**Option B: Manual GTM setup** *(free — recommended for WordPress.org installs)*
 1. Create a trigger for each ADT event (e.g., `scroll_depth_75`)
 2. Use built-in variables from dataLayer
 3. Configure your tags
@@ -401,7 +393,7 @@ Works with any HTML form + major vendors:
 }
 ```
 
-#### **Field-Level Tracking** *(Premium)*
+#### **Field-Level Tracking** *(enable in Settings → Form Interaction)*
 ```javascript
 {
   event: 'field_interaction',
@@ -559,7 +551,9 @@ add_filter('adt_has_consent', function($has_consent, $purpose) {
 
 ---
 
-### 6. Content Intelligence
+### 6. Content Intelligence *(Pro add-on)*
+
+> Not shipped in the WordPress.org free build. Install the Pro companion plugin for this module.
 
 #### **Last Content Type Viewed**
 ```javascript
@@ -654,8 +648,8 @@ Abandonment Triggers:
 Form Tracking:
   ✓ Form Submit Events
   ✓ Form Vendor Detection
-  ✓ Form Field Tracking (Premium)
-  ✓ Form Abandonment (Premium)
+  ✓ Enable Field Tracking
+  ✓ Form Vendor Detection (optional)
 ```
 
 #### **5. Pixel Settings** *(Premium)*
@@ -990,10 +984,6 @@ When you install **Pro** alongside the core plugin, you get the modules below. W
 **📋 Presets & configuration**
 - **Preset library** in wp-admin for faster rollout across sites
 
-**📝 Advanced form tracking**
-- **Field-level** interactions (`form_field_start`, `form_field_abandon`, etc.) beyond basic form lifecycle events
-- **Form vendor shortcuts** for popular builders (e.g. Gravity Forms, HubSpot, WPForms, Contact Form 7, Formidable, and others)
-
 **💼 Pro support**
 - Priority email support: support@datalayer-tracker.com
 - Documentation: [Knowledge base](https://datalayer-tracker.com/knowledge-base)
@@ -1124,6 +1114,7 @@ See [`brandmeetscode-datalayer-tracker/README.txt`](brandmeetscode-datalayer-tra
 - All JS/CSS enqueued (no stray inline script/style blocks)
 - `session_start()` limited to WooCommerce order-received pages
 - Wizard settings map cleaned up for removed Pro-only modules
+- Docs aligned: WooCommerce, field-level forms, and vendor shortcuts are free; Pro = pixels, server-side, GTM export, content intelligence, presets
 
 ### Version 1.2.4 – 1.2.2
 **Released:** 2026-05-15 – 2026-05-18

@@ -12,7 +12,7 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 <div class="wrap">
 <h1 style="margin-bottom:4px;"><?php echo esc_html__( 'DataLayer Tracker — Pro Add-on', 'brandmeetscode-datalayer-tracker' ); ?></h1>
 <p style="color:#646970;margin-top:0;margin-bottom:24px;">
-	<?php echo esc_html__( 'The Pro add-on is a standalone plugin — it works independently and does not require this free version.', 'brandmeetscode-datalayer-tracker' ); ?>
+	<?php echo esc_html__( 'The Pro add-on is sold separately. Install it alongside this plugin for advertising pixels, server-side tracking, GTM JSON export, and other modules not included in the WordPress.org build.', 'brandmeetscode-datalayer-tracker' ); ?>
 </p>
 
 <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:stretch;max-width:900px;">
@@ -41,7 +41,8 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 			$free_features = [
 				__( 'Page, content &amp; visitor context', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Engagement — scroll depth, active time, hover intent, video progress, focus/blur, clicks', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Form lifecycle events (view, start, submit, error, abandon)', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Form lifecycle &amp; field-level events (view, field start/complete/abandon, submit, error)', 'brandmeetscode-datalayer-tracker' ),
+				__( 'Form vendor shortcuts — Gravity Forms, HubSpot, Contact Form 7, WPForms, Formidable, and others (optional)', 'brandmeetscode-datalayer-tracker' ),
 				__( 'WooCommerce GA4-style browser events, cart abandonment &amp; refunds (when WooCommerce is active)', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Client-side sessions &amp; UTM parameters', 'brandmeetscode-datalayer-tracker' ),
 				__( 'GTM snippet output — paste your container ID', 'brandmeetscode-datalayer-tracker' ),
@@ -85,7 +86,7 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 			border-radius:0 0 4px 4px;
 			text-transform:uppercase;
 		">
-			<?php echo esc_html__( 'Standalone Plugin', 'brandmeetscode-datalayer-tracker' ); ?>
+			<?php echo esc_html__( 'Companion Plugin', 'brandmeetscode-datalayer-tracker' ); ?>
 		</span>
 		<p style="margin:0 0 4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#09ba65;">
 			<?php echo esc_html__( 'Upgrade', 'brandmeetscode-datalayer-tracker' ); ?>
@@ -105,7 +106,6 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 				__( 'GTM container JSON export (one-click import)', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Content intelligence &amp; session summaries', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Preset library for faster site rollout', 'brandmeetscode-datalayer-tracker' ),
-				__( 'Field-level form tracking &amp; form-vendor shortcuts', 'brandmeetscode-datalayer-tracker' ),
 				__( 'Priority email support', 'brandmeetscode-datalayer-tracker' ),
 			];
 			foreach ( $pro_features as $item ) :
@@ -132,7 +132,7 @@ $sales_url = esc_url( adt_get_pro_sales_url() );
 	echo wp_kses(
 		sprintf(
 			/* translators: %s: external Pro sales URL */
-			__( 'The Pro add-on is a <strong>completely separate, standalone plugin</strong> — it does not require this free version and can be installed on its own. Purchase and download it from <a href="%s" target="_blank" rel="noopener noreferrer">datalayer-tracker.com</a>. No features in this free build are locked, hidden, or time-limited.', 'brandmeetscode-datalayer-tracker' ),
+			__( 'The Pro add-on is a <strong>separate companion plugin</strong> — purchase and download it from <a href="%s" target="_blank" rel="noopener noreferrer">datalayer-tracker.com</a> and install it <strong>alongside</strong> this free plugin when you need pixels, server-side tracking, or GTM container export. No features in this free build are locked, hidden, or time-limited.', 'brandmeetscode-datalayer-tracker' ),
 			esc_url( $sales_url )
 		),
 		[

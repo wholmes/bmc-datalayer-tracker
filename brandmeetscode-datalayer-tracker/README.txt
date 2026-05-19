@@ -35,7 +35,7 @@ Listed as **BrandMeetsCode DataLayer Tracker**; commonly referred to as **DataLa
 
 = Not included in this build (available only in the separate Pro add-on) =
 
-Advertising **pixels** (Meta, TikTok, Google Ads, etc.), **Meta Conversions API**, **GA4 Measurement Protocol**, **GTM container JSON export**, **content-intelligence** module, **preset library** admin, and related server-side code are **not shipped** in this zip—they are not locked behind a key here; they are omitted entirely. Purchase the standalone Pro plugin from **DataLayer Tracker → Get Pro add-on** if you need those modules.
+Advertising **pixels** (Meta, TikTok, Google Ads, etc.), **Meta Conversions API**, **GA4 Measurement Protocol**, **GTM container JSON export**, **content-intelligence** module, **preset library** admin, and related server-side code are **not shipped** in this zip—they are not locked behind a key here; they are omitted entirely. Purchase the Pro companion plugin from **DataLayer Tracker → Get Pro add-on** and install it **alongside** this plugin if you need those modules.
 
 = Consent Management =
 
@@ -120,7 +120,7 @@ Typically yes when frontend output and script loading behave like a normal theme
 
 The **repository package** ships a **standalone** tracker: baseline dataLayer, consent controls, snippet-based GTM container output, baseline engagement/forms, regex URL exclude, debugging—usable **without** paying or expiring code paths.
 
-The **optional Pro ZIP** activates advanced settings only when that companion plugin is installed (license **via product sale**, **not** a sandbox timer locking the `.org` build).
+The **optional Pro companion plugin** adds modules omitted from this build (pixels, server-side, GTM JSON export, content intelligence, presets). Install it **alongside** this plugin after purchase—nothing in the free build is license-locked or time-limited.
 
 Admin **Get Pro add-on / Customer area / Pro status** links use **`adt_get_pro_sales_url()`**, **`adt_get_pro_customer_account_url()`**, **`adt_get_pro_customer_download_url()`** (`ADT_PRO_*` constants or hooks—see Developer Hooks).
 
@@ -147,7 +147,7 @@ Upload images in this order as `screenshot-1.png` through `screenshot-6.png` in 
 5. **Interaction tracking** — Clicks, forms, and media mapped to consistent events (`form_view`, `form_submit`, default clicks, video progress, and more) with less one-off GTM wiring.
 6. **Consent-aware loading** — CMP preference, delay-until-consent, TCF option, and fallbacks so tags respect your privacy setup; optional overlay display of blocked events for debugging.
 
-**Pro-only features** (separate plugin, not shown above): content intelligence, advertising pixels, GA4 Measurement Protocol, Meta CAPI, and GTM container JSON export. See [screenshots tour](https://datalayer-tracker.com/screenshots) for the full stack.
+**Pro-only features** (separate companion plugin, not shown above): advertising pixels, GA4 Measurement Protocol, Meta CAPI, GTM container JSON export, content intelligence, and preset library. Install Pro **alongside** this plugin from **DataLayer Tracker → Get Pro add-on**. See [screenshots tour](https://datalayer-tracker.com/screenshots) for the full stack.
 
 == Changelog ==
 
@@ -158,6 +158,7 @@ Upload images in this order as `screenshot-1.png` through `screenshot-6.png` in 
 * Remove all remaining inline `<script>`/`<style>` tags; all JS/CSS now enqueued via wp_enqueue/wp_add_inline_script
 * Fix: session_start() restricted to WooCommerce order-received pages only (not all pages)
 * Clean up wizard settings field map to remove fields for removed features
+* Docs: WooCommerce browser events, field-level form tracking, and form-vendor shortcuts are included in the free build (enable in Settings); Pro listing corrected on welcome and pricing pages
 
 = 1.2.4 - 2026-05-18 =
 * Fix consent blocking: cast consent-related settings to strings to match JS strict comparisons
