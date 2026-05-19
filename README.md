@@ -19,7 +19,7 @@ git clone git@github.com:wholmes/bmc-datalayer-tracker.git
 - **Buyer-facing readme:** `brandmeetscode-datalayer-tracker/README.txt`
 - **wp-admin menu label:** DataLayer Tracker
 - **This `README.md`:** developer documentation only
-- **Author:** [Brand Meets Code](https://brandmeetscode.com/) — Whittfield Holmes
+- **Author:** [Brand Meets Code](https://brandmeetscode.com/) — [Whittfield Holmes](https://brandmeetscode.com/)
 
 The **Pro add-on** is a separate product (not in this repository).
 
@@ -35,7 +35,9 @@ The **Pro add-on** is a separate product (not in this repository).
 
 ## 🚀 Overview
 
-**DataLayer Tracker** (WordPress.org listing: *BrandMeetsCode DataLayer Tracker*) is the free WordPress plugin from **[Brand Meets Code](https://brandmeetscode.com/)**, created by **Whittfield Holmes**. It injects a structured, consent-aware `dataLayer` for Google Tag Manager, engagement signals, forms, sessions, and optional WooCommerce browser ecommerce—without license gates or disabled settings.
+**DataLayer Tracker** (WordPress.org listing: *BrandMeetsCode DataLayer Tracker*) is the free WordPress plugin from **[Brand Meets Code](https://brandmeetscode.com/)**, created by **[Whittfield Holmes](https://brandmeetscode.com/)**. It injects a structured, consent-aware `dataLayer` for Google Tag Manager, engagement signals, forms, sessions, and optional WooCommerce browser ecommerce—without license gates or disabled settings.
+
+**Product site & docs:** [datalayer-tracker.com](https://datalayer-tracker.com) · [Knowledge base](https://datalayer-tracker.com/knowledge-base)
 
 ### What Makes This Build Different?
 
@@ -996,14 +998,6 @@ const context = window.ADTSession?.getContext();
 - Custom implementation help
 - Regular feature updates
 
-### Pricing
-
-- **Free**: Core tracking + GTM export
-- **Premium**: $99/year (single site)
-- **Agency**: $299/year (unlimited sites)
-
-[Upgrade to Pro add-on →](https://datalayer-tracker.com/pricing)
-
 ---
 
 ## 🐛 Troubleshooting
@@ -1156,15 +1150,14 @@ See [`brandmeetscode-datalayer-tracker/README.txt`](brandmeetscode-datalayer-tra
 - **Knowledge base & guides**: [https://datalayer-tracker.com/knowledge-base](https://datalayer-tracker.com/knowledge-base)
 - **Video tutorials**: [YouTube Channel](https://youtube.com/@whittfieldholmes)
 
-### Community
-- **Support Forum**: [WordPress.org](https://wordpress.org/support/plugin/brandmeetscode-datalayer-tracker)
-- **Feature Requests**: [GitHub Issues](https://github.com/wholmes/bmc-datalayer-tracker/issues)
-- **Facebook Group**: [ADT Users Community](https://facebook.com/groups/adt-users)
+### Community (free plugin)
+- **Help, bugs & ideas:** [WordPress.org support forum](https://wordpress.org/support/plugin/brandmeetscode-datalayer-tracker) — preferred for installs from WordPress.org
+- **Contact:** [datalayer-tracker.com](https://datalayer-tracker.com) (product questions, Pro add-on)
+- **Repo (developers):** [GitHub](https://github.com/wholmes/bmc-datalayer-tracker) — code discussion; [open an issue](https://github.com/wholmes/bmc-datalayer-tracker/issues/new) only for bugs/features tied to this repository
 
-### Premium Support
-- **Email**: support@datalayer-tracker.com
-- **Live Chat**: Available on [datalayer-tracker.com](https://datalayer-tracker.com) (Premium users)
-- **Response Time**: 24-48 hours (Premium: within 12 hours)
+### Pro add-on support
+- **Email:** support@datalayer-tracker.com (Pro customers)
+- **Docs:** [Knowledge base](https://datalayer-tracker.com/knowledge-base)
 
 ### Brand Meets Code
 Custom implementation, consulting, or agency work?
@@ -1200,7 +1193,9 @@ GNU General Public License for more details.
 
 ## 🙏 Credits
 
-**Developed by:** [Brand Meets Code](https://brandmeetscode.com/) — [Whittfield Holmes](https://datalayer-tracker.com)
+**Developed by:** [Brand Meets Code](https://brandmeetscode.com/) — [Whittfield Holmes](https://brandmeetscode.com/)
+
+**Product & documentation:** [datalayer-tracker.com](https://datalayer-tracker.com) · [Knowledge base](https://datalayer-tracker.com/knowledge-base)
 
 **Contributors:**
 - Community feedback and feature requests
@@ -1209,10 +1204,10 @@ GNU General Public License for more details.
 
 **Built With:**
 - WordPress
-- Google Tag Manager
-- Meta Pixel SDK
-- TikTok Pixel SDK
-- And many more amazing tools
+- Google Tag Manager (optional container snippet; tags configured in GTM)
+- `window.dataLayer` event pushes (engagement, forms, sessions, optional WooCommerce)
+
+*Advertising pixels (Meta, TikTok, Google Ads, etc.) are part of the separate Pro add-on, not this free build.*
 
 ---
 
@@ -1222,9 +1217,8 @@ If you find this plugin helpful:
 
 1. ⭐ **Star** this repository
 2. 📝 **Leave a review** on [WordPress.org](https://wordpress.org/support/plugin/brandmeetscode-datalayer-tracker/reviews/)
-3. 🐛 **Report bugs** on [GitHub](https://github.com/wholmes/bmc-datalayer-tracker/issues)
-4. 💡 **Suggest features** via [Feature Requests](https://github.com/wholmes/bmc-datalayer-tracker/issues/new)
-5. 📢 **Share** with your network
+3. 🐛 **Get help or report bugs** on the [WordPress.org forum](https://wordpress.org/support/plugin/brandmeetscode-datalayer-tracker)
+4. 📢 **Share** with your network
 
 ---
 
@@ -1237,6 +1231,8 @@ If you find this plugin helpful:
 
 ---
 
-**Made with ❤️ by [Brand Meets Code](https://brandmeetscode.com/)** — Whittfield Holmes
+**Made with ❤️ by [Brand Meets Code](https://brandmeetscode.com/)** — [Whittfield Holmes](https://brandmeetscode.com/)
+
+[datalayer-tracker.com](https://datalayer-tracker.com) · [Documentation](https://datalayer-tracker.com/knowledge-base)
 
 *Consent-aware dataLayer for WordPress, without enterprise complexity.*

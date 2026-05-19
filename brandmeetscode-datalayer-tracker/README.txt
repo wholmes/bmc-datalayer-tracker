@@ -271,8 +271,7 @@ Data is exposed to the browser `dataLayer`; downstream tags decide what leaves t
 
 = Pro customer support =
 * Email: support@datalayer-tracker.com
-* Live Chat: Available at [datalayer-tracker.com](https://datalayer-tracker.com)
-* Response time varies by plan
+* Documentation: [https://datalayer-tracker.com/knowledge-base](https://datalayer-tracker.com/knowledge-base)
 
 == Developer Hooks ==
 
