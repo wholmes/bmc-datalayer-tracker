@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function render_adt_field_callback($key, $config, $settings = null) {
+function adt_render_field_callback( $key, $config, $settings = null ) {
     $options     = $settings ?? adt_get_settings();
     $value       = $options[$key] ?? ($config['default'] ?? '');
     $type        = $config['type'] ?? 'checkbox';
@@ -592,4 +592,15 @@ function adt_dump_field_map_summary() {
 	wp_add_inline_script( 'jquery', $js, 'after' );
 
     echo '</div>';
+}
+
+/**
+ * @deprecated 1.2.6 Use adt_render_field_callback().
+ * @param string       $key      Setting key.
+ * @param array|string $config   Field config.
+ * @param array|null   $settings Settings array.
+ * @return void
+ */
+function render_adt_field_callback( $key, $config, $settings = null ) {
+	adt_render_field_callback( $key, $config, $settings );
 }

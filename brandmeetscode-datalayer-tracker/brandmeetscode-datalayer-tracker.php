@@ -437,11 +437,20 @@ function adt_all_features_enabled() {
 }
 
 /**
- * @deprecated 1.2.6 Use adt_all_features_enabled().
+ * Whether premium / Pro feature modules are active (filterable; Pro add-on may override).
+ *
+ * @return bool
+ */
+function adt_user_is_premium() {
+	return (bool) apply_filters( 'adt_user_is_premium', adt_all_features_enabled() );
+}
+
+/**
+ * @deprecated 1.2.6 Use adt_user_is_premium().
  * @return bool
  */
 function user_is_premium() {
-	return adt_all_features_enabled();
+	return adt_user_is_premium();
 }
 
 /**
@@ -558,13 +567,27 @@ function adt_verify_admin_nonce_or_die(  $context = ''  ) {
 }
 
 // ---------------------------------------------------------
-// 9. Fallback Consent Function
+// 9. Server-side consent helper (JS uses window.hasConsent in the browser)
 // ---------------------------------------------------------
-if ( !function_exists( 'has_consent' ) ) {
-    function has_consent(  $type = 'analytics'  ) {
-        return true;
-    }
+if ( ! function_exists( 'adt_has_consent' ) ) {
+	/**
+	 * @param string $type Consent category (e.g. analytics, marketing).
+	 * @return bool
+	 */
+	function adt_has_consent( $type = 'analytics' ) {
+		return (bool) apply_filters( 'adt_has_consent', true, $type );
+	}
+}
 
+if ( ! function_exists( 'has_consent' ) ) {
+	/**
+	 * @deprecated 1.2.6 Use adt_has_consent().
+	 * @param string $type Consent category.
+	 * @return bool
+	 */
+	function has_consent( $type = 'analytics' ) {
+		return adt_has_consent( $type );
+	}
 }
 // ---------------------------------------------------------
 // 10. Tracking Filter

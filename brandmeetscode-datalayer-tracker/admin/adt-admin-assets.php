@@ -10,8 +10,8 @@
  */
 if (!defined('ABSPATH')) exit;
 
-add_action('admin_enqueue_scripts', 'enqueue_adt_assets');
-function enqueue_adt_assets($hook) {
+add_action( 'admin_enqueue_scripts', 'adt_enqueue_assets' );
+function adt_enqueue_assets( $hook ) {
     // Only load on ADT admin pages
     $is_adt_page = (
         strpos($hook, 'adt') !== false ||
@@ -357,4 +357,13 @@ $(document).on("click",".adt-feature-nav",function(e){
         });
         ', 'after' );
     }
+}
+
+/**
+ * @deprecated 1.2.6 Use adt_enqueue_assets().
+ * @param string $hook Admin screen hook suffix.
+ * @return void
+ */
+function enqueue_adt_assets( $hook ) {
+	adt_enqueue_assets( $hook );
 }

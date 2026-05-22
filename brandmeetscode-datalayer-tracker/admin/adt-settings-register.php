@@ -944,7 +944,7 @@ function adt_register_settings() {
 	                $field_key,
 	                '', // Empty label for left column
 	                function () use ($field_key, $config) {
-	                    render_adt_field_callback($field_key, $config, null);
+	                    adt_render_field_callback( $field_key, $config, null );
 	                },
 	                'adt-settings',
 	                $section_id
@@ -957,7 +957,7 @@ function adt_register_settings() {
 			    $field_key,
 			    $config['label'] ?? '',
 			    function () use ($field_key, $config) {  // Remove $settings from use()
-			        render_adt_field_callback($field_key, $config, null);  // Pass null, function will get settings itself
+			        adt_render_field_callback( $field_key, $config, null );  // Pass null, function will get settings itself
 			    },
 			    'adt-settings',
 			    $section_id

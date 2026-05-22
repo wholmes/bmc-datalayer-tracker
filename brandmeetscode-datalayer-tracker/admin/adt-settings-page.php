@@ -70,7 +70,7 @@ if (isset($_GET['settings-updated']) && $_GET['settings-updated'] === '1') {
  * Helper to render a field row.
  * Accepts either simple string label or a config array.
  */
-function render_adt_setting_field( $key, $config, $value ) {
+function adt_render_setting_field( $key, $config, $value ) {
     if ( is_string( $config ) ) {
         $config = [
             'label'   => $config,
@@ -337,7 +337,16 @@ function render_adt_setting_field( $key, $config, $value ) {
     <?php
 }
 
- 
+/**
+ * @deprecated 1.2.6 Use adt_render_setting_field().
+ * @param string       $key    Setting key.
+ * @param array|string $config Field config.
+ * @param mixed        $value  Current value.
+ * @return void
+ */
+function render_adt_setting_field( $key, $config, $value ) {
+	adt_render_setting_field( $key, $config, $value );
+}
 
 // ------------------------------------
 // SECTION DEFINITIONS (unchanged)
