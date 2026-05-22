@@ -849,16 +849,19 @@ add_action('woocommerce_thankyou', function($order_id) {
 }, 10, 1);
 
 
-add_action('admin_init', function() {
-    if ( isset( $_GET['adt_reset_fresh'] ) ) {
-        adt_require_admin_nonce_and_cap( 'adt_reset_fresh' );
-        delete_option('adt_settings');
-        delete_option('adt_settings_transient');
-        delete_option('adt_welcome_dismissed');
-        update_option('adt_activation_timestamp', time());
-        wp_safe_redirect( admin_url( 'admin.php?page=adt-settings&reset=success' ) );
-        exit;
-    }
-});
+add_action(
+	'admin_init',
+	static function () {
+		if ( ! adt_verify_admin_get_action( 'adt_reset_fresh', 'adt_reset_fresh' ) ) {
+			return;
+		}
+		delete_option( 'adt_settings' );
+		delete_option( 'adt_settings_transient' );
+		delete_option( 'adt_welcome_dismissed' );
+		update_option( 'adt_activation_timestamp', time() );
+		wp_safe_redirect( admin_url( 'admin.php?page=adt-settings&reset=success' ) );
+		exit;
+	}
+);
 
 // Debug stub is registered via wp_enqueue_scripts above (search for 'adt-debug-stub').

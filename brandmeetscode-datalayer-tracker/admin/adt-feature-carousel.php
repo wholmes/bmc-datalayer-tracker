@@ -182,10 +182,9 @@ function adt_reset_feature_carousel_for_user( $user_id = 0 ) {
 add_action(
     'admin_init',
     static function () {
-        if ( ! isset( $_GET['adt_reset_feature_carousel'] ) ) {
+        if ( ! adt_verify_admin_get_action( 'adt_reset_feature_carousel', 'adt_reset_feature_carousel' ) ) {
             return;
         }
-        adt_require_admin_nonce_and_cap( 'adt_reset_feature_carousel' );
         adt_reset_feature_carousel_for_user();
         wp_safe_redirect(
             remove_query_arg(

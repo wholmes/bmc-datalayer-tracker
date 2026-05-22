@@ -162,6 +162,22 @@ function adt_require_admin_nonce_and_cap( $action ) {
 	check_admin_referer( $action );
 }
 
+/**
+ * True when an admin GET action is requested; verifies nonce and capability first.
+ *
+ * @param string $query_key  $_GET parameter name.
+ * @param string $nonce_action Nonce action (must match wp_nonce_url).
+ * @return bool
+ */
+function adt_verify_admin_get_action( $query_key, $nonce_action ) {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified via check_admin_referer() when this returns true.
+	if ( ! isset( $_GET[ $query_key ] ) ) {
+		return false;
+	}
+	adt_require_admin_nonce_and_cap( $nonce_action );
+	return true;
+}
+
 // Hide WP-generated "Documentation" duplicate menu item via enqueued style.
 add_action( 'admin_enqueue_scripts', function() {
     wp_add_inline_style( 'adt-admin', '#toplevel_page_adt-settings .wp-submenu a[href*="documentation"] { display: none !important; }' );
@@ -185,20 +201,24 @@ add_action( 'admin_menu', function () {
 // ALL YOUR PLUGIN CODE STARTS HERE
 // ============================================
 ob_start();
-// TEMPORARY: Clear legacy option cache (admin + nonce required).
-if ( isset( $_GET['adt_force_clear_cache'] ) ) {
-	adt_require_admin_nonce_and_cap( 'adt_force_clear_cache' );
-	delete_option( 'adt_is_premium' ); // Legacy option from older builds.
-	wp_die(
-		wp_kses_post(
-			sprintf(
-				/* translators: %s: Pricing admin URL */
-				__( 'Caches cleared. <a href="%s">Open plans &amp; Pro</a>', 'brandmeetscode-datalayer-tracker' ),
-				esc_url( admin_url( 'admin.php?page=adt-pricing' ) )
+add_action(
+	'admin_init',
+	static function () {
+		if ( ! adt_verify_admin_get_action( 'adt_force_clear_cache', 'adt_force_clear_cache' ) ) {
+			return;
+		}
+		delete_option( 'adt_is_premium' ); // Legacy option from older builds.
+		wp_die(
+			wp_kses_post(
+				sprintf(
+					/* translators: %s: Pricing admin URL */
+					__( 'Caches cleared. <a href="%s">Open plans &amp; Pro</a>', 'brandmeetscode-datalayer-tracker' ),
+					esc_url( admin_url( 'admin.php?page=adt-pricing' ) )
+				)
 			)
-		)
-	);
-}
+		);
+	}
+);
 // ---------------------------------------------------------
 // 0. PHP Session — only start on WooCommerce order pages
 // ---------------------------------------------------------
@@ -447,14 +467,17 @@ require_once ADT_PLUGIN_DIR . 'includes/adt-session-validation.php';
 require_once ADT_PLUGIN_DIR . 'includes/ajax/adt-setup-wizard-ajax.php';
 require_once ADT_PLUGIN_DIR . 'admin/adt-setup-wizard.php';
 // URL parameter to trigger welcome notice
-add_action( 'admin_init', function () {
-	if ( isset( $_GET['adt_show_welcome'] ) ) {
-		adt_require_admin_nonce_and_cap( 'adt_show_welcome' );
+add_action(
+	'admin_init',
+	static function () {
+		if ( ! adt_verify_admin_get_action( 'adt_show_welcome', 'adt_show_welcome' ) ) {
+			return;
+		}
 		update_user_meta( get_current_user_id(), 'adt_show_welcome', 1 );
 		wp_safe_redirect( remove_query_arg( array( 'adt_show_welcome', '_wpnonce' ) ) );
 		exit;
 	}
-} );
+);
 // ---------------------------------------------------------
 // 5.1 Legacy option cleanup & admin-only includes
 // ---------------------------------------------------------
