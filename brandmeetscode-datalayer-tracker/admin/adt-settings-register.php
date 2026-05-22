@@ -1172,8 +1172,14 @@ add_action('update_option_adt_settings', 'adt_clear_features_summary_cache', 10,
 
 // Manual IP Save Helper - Admin Notice
 add_action('admin_notices', function() {
-    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- one-off admin notice after intentional GET action.
-    if (current_user_can('manage_options') && isset($_GET['adt_manual_ip_save'])) {
+    if ( isset( $_GET['adt_manual_ip_save'] ) ) {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
+        $nonce = isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+        if ( ! wp_verify_nonce( $nonce, 'adt_manual_ip_save' ) ) {
+            return;
+        }
         $raw_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? wp_unslash( $_SERVER['REMOTE_ADDR'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- raw IP string; sanitized on next line.
         $current_ip = is_string( $raw_ip ) ? sanitize_text_field( $raw_ip ) : '';
         $excluded_ips = get_option('adt_excluded_admin_ips', []);

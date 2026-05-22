@@ -850,12 +850,13 @@ add_action('woocommerce_thankyou', function($order_id) {
 
 
 add_action('admin_init', function() {
-    if ( isset( $_GET['adt_reset_fresh'] ) && current_user_can( 'manage_options' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- dev-only reset link; capability-gated.
+    if ( isset( $_GET['adt_reset_fresh'] ) ) {
+        adt_require_admin_nonce_and_cap( 'adt_reset_fresh' );
         delete_option('adt_settings');
         delete_option('adt_settings_transient');
         delete_option('adt_welcome_dismissed');
         update_option('adt_activation_timestamp', time());
-        wp_safe_redirect(admin_url('admin.php?page=adt-settings&reset=success'));
+        wp_safe_redirect( admin_url( 'admin.php?page=adt-settings&reset=success' ) );
         exit;
     }
 });

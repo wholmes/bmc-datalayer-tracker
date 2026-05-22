@@ -24,8 +24,8 @@ WORDPRESS.ORG ZIP:
 
 PRO ADD-ON: separate product / repository (not in this repo).
 
-RESET FEATURE CAROUSEL (admin):
-  /wp-admin/admin.php?page=adt-settings&adt_reset_feature_carousel=1
+RESET FEATURE CAROUSEL (admin; requires manage_options + nonce URL):
+  Use wp_nonce_url( admin_url( 'admin.php?page=adt-settings&adt_reset_feature_carousel=1' ), 'adt_reset_feature_carousel' )
 
 RESUBMISSION: Request slug brandmeetscode-datalayer-tracker in Plugin Review email
   when uploading the ZIP (see WPORG-SLUG-REPLY.txt).

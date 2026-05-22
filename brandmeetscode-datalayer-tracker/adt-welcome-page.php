@@ -16,21 +16,6 @@ if (!defined('ABSPATH')) {
 
 $has_dismissed = get_option( 'adt_welcome_dismissed', false );
 
-
-// Add this temporarily to your URL: ?adt_dismiss_welcome=1
-if ( isset( $_GET['adt_dismiss_welcome'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- one-click dismiss flag only.
-    update_option('adt_welcome_dismissed', true);
-    wp_safe_redirect(admin_url('admin.php?page=adt-settings'));
-    exit;
-}
-
-add_action('admin_post_adt_dismiss_welcome', function() {
-    check_admin_referer('adt_dismiss_welcome');
-    update_option('adt_welcome_dismissed', true);
-    wp_safe_redirect(admin_url('admin.php?page=adt-settings'));
-    exit;
-});
-
 // Remove automatic admin notices output on this page
 remove_all_actions('admin_notices');
 

@@ -144,6 +144,24 @@ if ( ! function_exists( 'adt_fs' ) ) {
         return null;
     }
 }
+
+/**
+ * Require manage_options and a valid admin nonce before privileged admin mutations.
+ *
+ * @param string $action Nonce action (must match wp_nonce_url / wp_create_nonce).
+ * @return void
+ */
+function adt_require_admin_nonce_and_cap( $action ) {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die(
+			esc_html__( 'You do not have permission to perform this action.', 'brandmeetscode-datalayer-tracker' ),
+			esc_html__( 'Forbidden', 'brandmeetscode-datalayer-tracker' ),
+			array( 'response' => 403 )
+		);
+	}
+	check_admin_referer( $action );
+}
+
 // Hide WP-generated "Documentation" duplicate menu item via enqueued style.
 add_action( 'admin_enqueue_scripts', function() {
     wp_add_inline_style( 'adt-admin', '#toplevel_page_adt-settings .wp-submenu a[href*="documentation"] { display: none !important; }' );
@@ -167,9 +185,9 @@ add_action( 'admin_menu', function () {
 // ALL YOUR PLUGIN CODE STARTS HERE
 // ============================================
 ob_start();
-// TEMPORARY: Clear legacy option cache (manage_options).
-// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Intentional admin-only GET utility; capability enforced below.
-if ( isset( $_GET['adt_force_clear_cache'] ) && current_user_can( 'manage_options' ) ) {
+// TEMPORARY: Clear legacy option cache (admin + nonce required).
+if ( isset( $_GET['adt_force_clear_cache'] ) ) {
+	adt_require_admin_nonce_and_cap( 'adt_force_clear_cache' );
 	delete_option( 'adt_is_premium' ); // Legacy option from older builds.
 	wp_die(
 		wp_kses_post(
@@ -430,12 +448,12 @@ require_once ADT_PLUGIN_DIR . 'includes/ajax/adt-setup-wizard-ajax.php';
 require_once ADT_PLUGIN_DIR . 'admin/adt-setup-wizard.php';
 // URL parameter to trigger welcome notice
 add_action( 'admin_init', function () {
-    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Intentional admin routing flag; capability enforced below.
-    if ( isset( $_GET['adt_show_welcome'] ) && current_user_can( 'manage_options' ) ) {
-        update_user_meta( get_current_user_id(), 'adt_show_welcome', 1 );
-        wp_safe_redirect( remove_query_arg( 'adt_show_welcome' ) );
-        exit;
-    }
+	if ( isset( $_GET['adt_show_welcome'] ) ) {
+		adt_require_admin_nonce_and_cap( 'adt_show_welcome' );
+		update_user_meta( get_current_user_id(), 'adt_show_welcome', 1 );
+		wp_safe_redirect( remove_query_arg( array( 'adt_show_welcome', '_wpnonce' ) ) );
+		exit;
+	}
 } );
 // ---------------------------------------------------------
 // 5.1 Legacy option cleanup & admin-only includes

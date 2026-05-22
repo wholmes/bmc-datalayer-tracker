@@ -22,7 +22,8 @@ if (!current_user_can('manage_options')) {
 $current = get_option('adt_settings', []);
 // Add nonce verification
 if ( isset( $_POST['adt_restore_settings_nonce'] ) &&
-    wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['adt_restore_settings_nonce'] ) ), 'adt_restore_settings' ) ) {
+    wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['adt_restore_settings_nonce'] ) ), 'adt_restore_settings' ) &&
+    current_user_can( 'manage_options' ) ) {
     $current = get_option('adt_settings', []);
     if (isset($current['include_page_type']) && $current['include_page_type'] === 0) {
         $correct_defaults = adt_get_default_settings();

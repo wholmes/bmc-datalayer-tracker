@@ -182,14 +182,14 @@ function adt_reset_feature_carousel_for_user( $user_id = 0 ) {
 add_action(
     'admin_init',
     static function () {
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- capability-gated dev reset; same pattern as adt_show_welcome.
-        if ( ! isset( $_GET['adt_reset_feature_carousel'] ) || ! current_user_can( 'manage_options' ) ) {
+        if ( ! isset( $_GET['adt_reset_feature_carousel'] ) ) {
             return;
         }
+        adt_require_admin_nonce_and_cap( 'adt_reset_feature_carousel' );
         adt_reset_feature_carousel_for_user();
         wp_safe_redirect(
             remove_query_arg(
-                'adt_reset_feature_carousel',
+                array( 'adt_reset_feature_carousel', '_wpnonce' ),
                 wp_get_referer() ? wp_get_referer() : admin_url( 'admin.php?page=adt-settings' )
             )
         );
@@ -229,7 +229,10 @@ function adt_render_feature_carousel() {
 // AJAX handler for dismissal
 add_action('wp_ajax_adt_dismiss_feature_carousel', function() {
     check_ajax_referer('adt_carousel_action', 'security');
-    
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_send_json_error( array( 'message' => 'permission_denied' ), 403 );
+    }
+
     $user_id = get_current_user_id();
     $duration = isset( $_POST['duration'] ) ? sanitize_text_field( wp_unslash( $_POST['duration'] ) ) : '';
     
@@ -246,7 +249,10 @@ add_action('wp_ajax_adt_dismiss_feature_carousel', function() {
 // AJAX handler for feature cycling
 add_action('wp_ajax_adt_cycle_feature', function() {
     check_ajax_referer('adt_carousel_action', 'security');
-    
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_send_json_error( array( 'message' => 'permission_denied' ), 403 );
+    }
+
     $user_id = get_current_user_id();
     $direction = isset( $_POST['direction'] ) ? sanitize_text_field( wp_unslash( $_POST['direction'] ) ) : '';
     $current_index = get_user_meta($user_id, 'adt_feature_carousel_index', true);

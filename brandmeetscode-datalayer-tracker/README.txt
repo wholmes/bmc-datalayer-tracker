@@ -160,6 +160,7 @@ Upload images in this order as `screenshot-1.png` through `screenshot-6.png` in 
 * Clean up wizard settings field map to remove fields for removed features
 * Docs: WooCommerce browser events, field-level form tracking, and form-vendor shortcuts are included in the free build (enable in Settings); Pro listing corrected on welcome and pricing pages
 * Plugin Check: escape tab SVG output with `wp_kses()`; **Tested up to** 7.0
+* Security: nonce + `manage_options` on all privileged admin/AJAX mutations; removed unauthenticated welcome dismiss GET shortcut
 
 = 1.2.4 - 2026-05-18 =
 * Fix consent blocking: cast consent-related settings to strings to match JS strict comparisons

@@ -27,7 +27,7 @@ add_action('admin_menu', function () {
         '',
         'Welcome to DataLayer Tracker',
         'Welcome',
-        'read',
+        'manage_options',
         'adt-welcome',
         'adt_render_welcome_page'
     );
@@ -210,6 +210,9 @@ function adt_render_field_mapping_page() {
 
 // Handle welcome page dismissal
 add_action('admin_post_adt_dismiss_welcome', function() {
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( esc_html__( 'Unauthorized.', 'brandmeetscode-datalayer-tracker' ), '', array( 'response' => 403 ) );
+    }
     check_admin_referer('adt_dismiss_welcome');
     
     // Set site-wide option
