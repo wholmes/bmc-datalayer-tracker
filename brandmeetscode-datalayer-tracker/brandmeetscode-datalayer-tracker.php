@@ -276,12 +276,11 @@ function adt_get_pro_customer_account_url() {
 }
 
 /**
- * Sanitize inline SVG fragments for safe echo in admin (tab icons, toolbar).
+ * Allowed HTML for inline SVG fragments in admin UI.
  *
- * @param string $svg HTML/SVG markup from trusted static sources only.
- * @return string
+ * @return array<string, array<string, bool>>
  */
-function adt_kses_inline_svg( $svg ) {
+function adt_get_inline_svg_allowed_html() {
 	static $allowed = null;
 
 	if ( null === $allowed ) {
@@ -345,7 +344,17 @@ function adt_kses_inline_svg( $svg ) {
 		);
 	}
 
-	return wp_kses( (string) $svg, $allowed );
+	return $allowed;
+}
+
+/**
+ * Sanitize inline SVG fragments for safe echo in admin (tab icons, toolbar).
+ *
+ * @param string $svg HTML/SVG markup from trusted static sources only.
+ * @return string
+ */
+function adt_kses_inline_svg( $svg ) {
+	return wp_kses( (string) $svg, adt_get_inline_svg_allowed_html() );
 }
 
 // ---------------------------------------------------------

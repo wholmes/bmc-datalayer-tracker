@@ -441,8 +441,7 @@ function adt_get_tab_icon($section_id) {
 			    <a href="<?php echo esc_url( $tab_url ); ?>" 
 			       class="adt-menu-item<?php echo esc_attr( $is_active ? ' active' : '' ); ?>"
 			       data-target="section-<?php echo esc_attr( $id ); ?>">
-			       <span class="adt-tab-icon" aria-hidden="true"><?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SVG via adt_kses_inline_svg (wp_kses).
-			       echo adt_kses_inline_svg( adt_get_tab_icon( $id ) ); ?></span>
+			       <span class="adt-tab-icon" aria-hidden="true"><?php echo wp_kses( adt_get_tab_icon( $id ), adt_get_inline_svg_allowed_html() ); ?></span>
                     <span><?php echo esc_html( $title ); ?></span>
                 </a>
             <?php endforeach; ?>
@@ -458,8 +457,7 @@ function adt_get_tab_icon($section_id) {
                 <!-- Section Header -->
                 <div class="adt-section-header" style="padding: 24px 24px 16px; border-bottom: 2px solid #f0f0f0; background: linear-gradient(to bottom, #fafafa 0%, #fff 100%);">
                     <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #23282d; display: flex; align-items: center; gap: 8px;">
-                        <span class="adt-tab-icon" aria-hidden="true"><?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SVG via adt_kses_inline_svg (wp_kses).
-			       echo adt_kses_inline_svg( adt_get_tab_icon( $id ) ); ?></span>
+                        <span class="adt-tab-icon" aria-hidden="true"><?php echo wp_kses( adt_get_tab_icon( $id ), adt_get_inline_svg_allowed_html() ); ?></span>
                         <?php echo esc_html( $title ); ?>
                     </h2>
                 </div>

@@ -2,7 +2,7 @@
 Contributors: whittfield
 Tags: google tag manager, analytics, woocommerce, tracking, consent
 Requires at least: 5.8
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 1.2.5
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -159,6 +159,7 @@ Upload images in this order as `screenshot-1.png` through `screenshot-6.png` in 
 * Fix: session_start() restricted to WooCommerce order-received pages only (not all pages)
 * Clean up wizard settings field map to remove fields for removed features
 * Docs: WooCommerce browser events, field-level form tracking, and form-vendor shortcuts are included in the free build (enable in Settings); Pro listing corrected on welcome and pricing pages
+* Plugin Check: escape tab SVG output with `wp_kses()`; **Tested up to** 7.0
 
 = 1.2.4 - 2026-05-18 =
 * Fix consent blocking: cast consent-related settings to strings to match JS strict comparisons
