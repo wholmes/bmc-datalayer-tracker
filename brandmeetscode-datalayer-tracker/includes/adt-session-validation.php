@@ -64,18 +64,9 @@ class ADT_Session_Validator {
      */
     public function generate_session_id() {
         try {
-            // Use random_bytes for cryptographic security
-            $bytes = random_bytes(32);
-            $session_id = bin2hex($bytes);
-            
-            // Add timestamp and hash for additional uniqueness
-            $timestamp = microtime(true);
-            $hash = hash('sha256', $session_id . $timestamp . wp_salt('nonce'));
-            
-            return substr($hash, 0, 64);
-        } catch (Exception $e) {
-            // Fallback to wp_generate_password if random_bytes fails
-            return hash('sha256', wp_generate_password(64, true, true) . microtime(true));
+            return bin2hex( random_bytes( 32 ) );
+        } catch ( Exception $e ) {
+            return hash( 'sha256', wp_generate_password( 64, true, true ) . microtime( true ) );
         }
     }
     

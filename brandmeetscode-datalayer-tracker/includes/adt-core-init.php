@@ -178,7 +178,7 @@ add_filter('adt_should_track', function($should_track) {
 // 🔧 Core bootstrapping: Woo session setup, REST routes, data localization
 
 if (!defined('ADT_VERSION')) {
-    define('ADT_VERSION', '1.2.5');
+    define('ADT_VERSION', '1.2.6');
 }
 
 // Translations load automatically on WordPress 4.6+ for plugins hosted on WordPress.org (Requires at least: 5.8).

@@ -15,7 +15,6 @@ defined('ABSPATH') || exit;
  * 
  * Fires when an order is refunded in WooCommerce admin.
  * Stores refund data in WordPress transient to be pushed to dataLayer on next frontend page load.
- * Also sends refund immediately to GA4 via Measurement Protocol (if configured).
  * 
  * @param int $order_id The order ID being refunded
  * @param int $refund_id The refund ID
@@ -97,9 +96,6 @@ function adt_track_woocommerce_refund($order_id, $refund_id) {
     
     adt_debug_log('Refund tracking: Event stored in transient for order #' . $order->get_order_number());
     
-    // BELT: Send to GA4 server-side immediately (doesn't require frontend visit)
-    adt_send_refund_to_ga4_serverside($refund_data);
-    
     // Add order note for visibility
     $order->add_order_note(
         sprintf(
@@ -153,86 +149,6 @@ function adt_output_refund_to_datalayer() {
     wp_register_script( 'adt-refund-data', false, [], $adt_asset_ver, true );
     wp_add_inline_script( 'adt-refund-data', $js );
     wp_enqueue_script( 'adt-refund-data' );
-}
-
-/**
- * Send refund event to GA4 via Measurement Protocol (Server-Side)
- * 
- * This is the "belt" - sends refund immediately without requiring frontend visit.
- * Uses GA4 Measurement Protocol to send event directly to Google Analytics.
- * Bypasses client-side tracking issues like ad blockers and consent management.
- * 
- * Requires:
- * - GA4 Measurement Protocol enabled in ADT settings
- * - GA4 Measurement ID configured
- * - GA4 API Secret configured
- * - GA4 MP (Pro add-on only; not in WordPress.org build)
- * 
- * @param array $refund_data The refund event data
- */
-function adt_send_refund_to_ga4_serverside($refund_data) {
-    // Check if GA4 Measurement Protocol is enabled and configured
-    $settings = get_option('adt_settings', []);
-    
-    if (empty($settings['ga4_mp_enabled'])) {
-        adt_debug_log('Refund server-side: GA4 MP not enabled, skipping');
-        return;
-    }
-    
-    if (empty($settings['ga4_measurement_id']) || empty($settings['ga4_api_secret'])) {
-        adt_debug_log('Refund server-side: GA4 MP not configured (missing measurement ID or API secret)');
-        return;
-    }
-    
-    // Build GA4 Measurement Protocol payload
-    $measurement_id = $settings['ga4_measurement_id'];
-    $api_secret = $settings['ga4_api_secret'];
-    
-    // Generate client_id (use session ID or generate one)
-    $client_id = session_id() ?: wp_generate_uuid4();
-    
-    // Build the event payload
-    $payload = [
-        'client_id' => $client_id,
-        'events' => [
-            [
-                'name' => 'refund',
-                'params' => [
-                    'transaction_id' => $refund_data['ecommerce']['transaction_id'],
-                    'value' => $refund_data['ecommerce']['value'],
-                    'currency' => $refund_data['ecommerce']['currency'],
-                    'affiliation' => $refund_data['ecommerce']['affiliation'],
-                    'items' => $refund_data['ecommerce']['items'],
-                    // Additional refund metadata
-                    'refund_id' => $refund_data['refund_meta']['refund_id'],
-                    'refund_reason' => $refund_data['refund_meta']['refund_reason'],
-                    'refund_type' => $refund_data['refund_meta']['refund_type']
-                ]
-            ]
-        ]
-    ];
-    
-    // Send to GA4 Measurement Protocol
-    $url = 'https://www.google-analytics.com/mp/collect?measurement_id=' . $measurement_id . '&api_secret=' . $api_secret;
-    
-    $response = wp_remote_post($url, [
-        'body' => wp_json_encode($payload),
-        'headers' => [
-            'Content-Type' => 'application/json'
-        ],
-        'timeout' => 10
-    ]);
-    
-    if (is_wp_error($response)) {
-        adt_debug_log('Refund server-side: Failed to send to GA4 - ' . $response->get_error_message());
-    } else {
-        $status_code = wp_remote_retrieve_response_code($response);
-        if ($status_code === 204) {
-            adt_debug_log('Refund server-side: Successfully sent to GA4 via Measurement Protocol');
-        } else {
-            adt_debug_log('Refund server-side: GA4 API returned status ' . $status_code);
-        }
-    }
 }
 
 /**

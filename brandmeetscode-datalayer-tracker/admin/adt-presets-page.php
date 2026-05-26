@@ -541,7 +541,12 @@ function adt_render_presets_page() {
     </div>
 
     
-    <?php ob_start(); ?>
+    <?php
+    wp_add_inline_script(
+        'jquery',
+        adt_capture_inline_script(
+            static function () use ( $presets, $current_settings, $adt_pricing_url ) {
+                ?>
     jQuery(document).ready(function($) {
         const presets = <?php echo wp_json_encode( $presets ); ?>;
         const currentSettings = <?php echo wp_json_encode( $current_settings ); ?>;
@@ -660,7 +665,12 @@ function adt_render_presets_page() {
             });
         }
     });
-    <?php wp_add_inline_script( 'jquery', ob_get_clean(), 'after' ); ?>
+                <?php
+            }
+        ),
+        'after'
+    );
+    ?>
 
     
     <?php

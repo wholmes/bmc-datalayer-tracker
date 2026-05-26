@@ -3,7 +3,7 @@ Contributors: whittfield
 Tags: google tag manager, analytics, woocommerce, tracking, consent
 Requires at least: 5.8
 Tested up to: 7.0
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -63,7 +63,7 @@ Optional **snippet** + consistent **dataLayer** pushes. Full **container JSON ex
 
 = Building the free (.org) ZIP from source (maintainers) =
 
-Canonical **free** source lives in **`brandmeetscode-datalayer-tracker/`** at the repository root. From the **repository root**, run **`./build-free-zip.sh`** to create **`brandmeetscode-datalayer-tracker-wporg-<version>.zip`** (same folder name inside the ZIP). Pass a path as the first argument to set the output file; **parent directories are created** if missing (e.g. `../dist/`).
+Canonical **free** source lives in **`brandmeetscode-datalayer-tracker/`** at the repository root. From the **repository root**, run **`./build-free-zip.sh`** to create **`brandmeetscode-datalayer-tracker-wporg-<version>.zip`** (same folder name inside the ZIP). Pass a path as the first argument to set the output file; **parent directories are created** if missing (e.g. `../dist/`). Before uploading to WordPress.org, run **`./scripts/wporg-pre-submit-audit.sh`** to build and scan the ZIP for common Plugin Review issues.
 
 **WordPress.org slug reservation:** After updating code, reply to the Plugin Review email and request slug **`brandmeetscode-datalayer-tracker`**. A temporary Text Domain warning until WordPress updates their side is expected.
 
@@ -150,6 +150,14 @@ Upload images in this order as `screenshot-1.png` through `screenshot-6.png` in 
 **Pro-only features** (separate companion plugin, not shown above): advertising pixels, GA4 Measurement Protocol, Meta CAPI, GTM container JSON export, content intelligence, and preset library. Install Pro **alongside** this plugin from **DataLayer Tracker → Get Pro add-on**. See [screenshots tour](https://datalayer-tracker.com/screenshots) for the full stack.
 
 == Changelog ==
+
+= 1.2.6 - 2026-05-26 =
+* Security: session IDs use `random_bytes()` only — no WordPress auth salt material
+* Privacy: remove GA4 Measurement Protocol refund calls from wp-admin (no third-party tracking from admin)
+* Plugin Check: pair inline script output buffers via `adt_capture_inline_script()`; remove stray global `ob_start()`
+* Security: sanitize AJAX nonces with `sanitize_text_field()` before verification; sanitize array setting values on save; remove `nonce_hint` from error responses
+* Naming: remove deprecated unprefixed PHP wrappers (`user_is_premium`, `has_consent`, `enqueue_adt_assets`, `render_adt_*`)
+* Cleanup: remove dead setup-wizard GA4/Meta connection-test JavaScript (handlers were not shipped in this build)
 
 = 1.2.5 - 2026-05-18 =
 * WordPress.org naming: distinctive listing **BrandMeetsCode DataLayer Tracker**; slug and text domain **brandmeetscode-datalayer-tracker**; wp-admin UI remains **DataLayer Tracker**

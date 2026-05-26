@@ -358,12 +358,3 @@ $(document).on("click",".adt-feature-nav",function(e){
         ', 'after' );
     }
 }
-
-/**
- * @deprecated 1.2.6 Use adt_enqueue_assets().
- * @param string $hook Admin screen hook suffix.
- * @return void
- */
-function enqueue_adt_assets( $hook ) {
-	adt_enqueue_assets( $hook );
-}

@@ -4,7 +4,7 @@
  * Plugin Name:       BrandMeetsCode DataLayer Tracker
  * Plugin URI:        https://datalayer-tracker.com/knowledge-base/
  * Description:       Consent-aware dataLayer for GTM — engagement, forms, WooCommerce browser events, sessions, and debug overlay. Pro add-on adds pixels, server-side, and GTM export.
- * Version:           1.2.5
+ * Version:           1.2.6
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Brand Meets Code
@@ -178,6 +178,18 @@ function adt_verify_admin_get_action( $query_key, $nonce_action ) {
 	return true;
 }
 
+/**
+ * Run a callback inside output buffering and return captured output (paired start/clean).
+ *
+ * @param callable $callback Emits script/CSS fragment.
+ * @return string
+ */
+function adt_capture_inline_script( callable $callback ) {
+	ob_start();
+	$callback();
+	return (string) ob_get_clean();
+}
+
 // Hide WP-generated "Documentation" duplicate menu item via enqueued style.
 add_action( 'admin_enqueue_scripts', function() {
     wp_add_inline_style( 'adt-admin', '#toplevel_page_adt-settings .wp-submenu a[href*="documentation"] { display: none !important; }' );
@@ -200,7 +212,6 @@ add_action( 'admin_menu', function () {
 // ============================================
 // ALL YOUR PLUGIN CODE STARTS HERE
 // ============================================
-ob_start();
 add_action(
 	'admin_init',
 	static function () {
@@ -446,14 +457,6 @@ function adt_user_is_premium() {
 }
 
 /**
- * @deprecated 1.2.6 Use adt_user_is_premium().
- * @return bool
- */
-function user_is_premium() {
-	return adt_user_is_premium();
-}
-
-/**
  * @deprecated 1.2.6 Use adt_all_features_enabled().
  * @return bool
  */
@@ -579,16 +582,6 @@ if ( ! function_exists( 'adt_has_consent' ) ) {
 	}
 }
 
-if ( ! function_exists( 'has_consent' ) ) {
-	/**
-	 * @deprecated 1.2.6 Use adt_has_consent().
-	 * @param string $type Consent category.
-	 * @return bool
-	 */
-	function has_consent( $type = 'analytics' ) {
-		return adt_has_consent( $type );
-	}
-}
 // ---------------------------------------------------------
 // 10. Tracking Filter
 // ---------------------------------------------------------

@@ -50,23 +50,15 @@ foreach ($ajax_actions as $action) {
  * Security check for all AJAX requests
  */
 function adt_check_nonce_and_user() {
-	// Values are validated by check_ajax_referer(); variable is only for error messaging.
-	// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-	$nonce_provided = isset( $_POST['security'] ) ? wp_unslash( $_POST['security'] ) : ( isset( $_REQUEST['security'] ) ? wp_unslash( $_REQUEST['security'] ) : '' );
-	// phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+	$nonce_provided = '';
+	if ( isset( $_POST['security'] ) ) {
+		$nonce_provided = sanitize_text_field( wp_unslash( $_POST['security'] ) );
+	}
     $nonce_action = 'adt_admin_action';
     
-    // Debug logging
-    $settings = get_option('adt_settings', []);
-    // if (!empty($settings['debug_mode'])) {
-    //     error_log('[ADT Debug] Nonce check - Provided: ' . substr($nonce_provided, 0, 10) . '...');
-    //     error_log('[ADT Debug] Nonce check - Action: ' . $nonce_action);
-    //     error_log('[ADT Debug] User ID: ' . get_current_user_id());
-    // }
-    
-    if (!check_ajax_referer($nonce_action, 'security', false)) {
+    if ( ! check_ajax_referer( $nonce_action, 'security', false ) ) {
         $error_msg = 'Security check failed.';
-        if (empty($nonce_provided)) {
+        if ( empty( $nonce_provided ) ) {
             $error_msg .= ' No nonce provided.';
         } else {
             $error_msg .= ' Invalid or expired nonce. Try refreshing the page.';
@@ -75,7 +67,6 @@ function adt_check_nonce_and_user() {
         wp_send_json_error([
             'error' => 'invalid_nonce',
             'message' => $error_msg,
-            'nonce_hint' => substr($nonce_provided, 0, 8) . '...'
         ], 403);
     }
     
@@ -133,7 +124,19 @@ function adt_ajax_save_setting() {
         
         $key   = isset( $_POST['key'] ) ? sanitize_text_field( wp_unslash( $_POST['key'] ) ) : '';
         $type  = isset( $_POST['type'] ) ? sanitize_text_field( wp_unslash( $_POST['type'] ) ) : '';
-        $value = isset( $_POST['value'] ) ? wp_unslash( $_POST['value'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Typed via adt_cast_setting_value() below.
+        $value = isset( $_POST['value'] ) ? wp_unslash( $_POST['value'] ) : '';
+        if ( is_scalar( $value ) ) {
+            $value = sanitize_text_field( (string) $value );
+        } elseif ( is_array( $value ) ) {
+            $value = array_map(
+                static function ( $item ) {
+                    return is_scalar( $item ) ? sanitize_text_field( (string) $item ) : '';
+                },
+                $value
+            );
+        } else {
+            $value = '';
+        }
 
         // phpcs:enable WordPress.Security.NonceVerification.Missing
         
@@ -693,7 +696,15 @@ function adt_cast_setting_value($value, $type, $key) {
             return $value;
             
         case 'array':
-            return is_array($value) ? $value : [];
+            if ( ! is_array( $value ) ) {
+                return array();
+            }
+            return array_map(
+                static function ( $item ) {
+                    return is_scalar( $item ) ? sanitize_text_field( (string) $item ) : '';
+                },
+                $value
+            );
         
         case 'text':
         default:

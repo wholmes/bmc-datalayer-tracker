@@ -593,14 +593,3 @@ function adt_dump_field_map_summary() {
 
     echo '</div>';
 }
-
-/**
- * @deprecated 1.2.6 Use adt_render_field_callback().
- * @param string       $key      Setting key.
- * @param array|string $config   Field config.
- * @param array|null   $settings Settings array.
- * @return void
- */
-function render_adt_field_callback( $key, $config, $settings = null ) {
-	adt_render_field_callback( $key, $config, $settings );
-}

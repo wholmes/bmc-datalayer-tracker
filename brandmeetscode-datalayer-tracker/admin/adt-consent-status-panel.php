@@ -105,7 +105,12 @@ add_action('admin_notices', function() {
     </div>
 </div>
 
-<?php ob_start(); ?>
+<?php
+wp_add_inline_script(
+    'adt-utils',
+    adt_capture_inline_script(
+        static function () {
+            ?>
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle details
     document.getElementById('adt-cmp-details-toggle')?.addEventListener('click', function(e) {
@@ -358,7 +363,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(runDetection, 500);
 });
-<?php wp_add_inline_script( 'adt-utils', ob_get_clean(), 'after' ); ?>
+            <?php
+        }
+    ),
+    'after'
+);
+?>
 <?php
 });
 // Callable function - duplicates the admin_notices rendering but with custom styling
@@ -417,7 +427,12 @@ function adt_render_cmp_status_panel() {
         </div>
     </div>
 </div>
-<?php ob_start(); ?>
+<?php
+wp_add_inline_script(
+    'adt-utils',
+    adt_capture_inline_script(
+        static function () {
+            ?>
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle details
     document.getElementById('adt-cmp-details-toggle')?.addEventListener('click', function(e) {
@@ -670,7 +685,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(runDetection, 500);
 });
-<?php wp_add_inline_script( 'adt-utils', ob_get_clean(), 'after' ); ?>
+            <?php
+        }
+    ),
+    'after'
+);
+?>
 
 <?php
 }

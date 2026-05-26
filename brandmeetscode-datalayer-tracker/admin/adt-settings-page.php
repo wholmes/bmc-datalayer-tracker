@@ -337,17 +337,6 @@ function adt_render_setting_field( $key, $config, $value ) {
     <?php
 }
 
-/**
- * @deprecated 1.2.6 Use adt_render_setting_field().
- * @param string       $key    Setting key.
- * @param array|string $config Field config.
- * @param mixed        $value  Current value.
- * @return void
- */
-function render_adt_setting_field( $key, $config, $value ) {
-	adt_render_setting_field( $key, $config, $value );
-}
-
 // ------------------------------------
 // SECTION DEFINITIONS (unchanged)
 // ------------------------------------
@@ -486,7 +475,12 @@ function adt_get_tab_icon($section_id) {
 
 <div class="adt-settings-page-bottom">
 
-<?php ob_start(); ?>
+<?php
+wp_add_inline_script(
+    'adt-utils',
+    adt_capture_inline_script(
+        static function () {
+            ?>
 document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.adt-menu-item');
     const TAB_KEY = 'adt_active_tab';
@@ -573,7 +567,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-<?php wp_add_inline_script( 'adt-utils', ob_get_clean() ); ?>
+            <?php
+        }
+    )
+);
+?>
 
 
     <!-- SETTINGS FORM -->
@@ -770,7 +768,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		    </div>
 		</div>
 		<?php endif; ?>
-	<?php ob_start(); ?>
+	<?php
+	wp_add_inline_script(
+	    'adt-utils',
+	    adt_capture_inline_script(
+	        static function () {
+	            ?>
 	document.addEventListener('DOMContentLoaded', () => {
 	    // Define utilities ONCE at the top
 	    const LS  = localStorage;
@@ -957,9 +960,18 @@ document.addEventListener('DOMContentLoaded', function() {
 	        }, true);
 	    });
 	});
-	<?php wp_add_inline_script( 'adt-utils', ob_get_clean() ); ?>
+	            <?php
+	        }
+	    )
+	);
+	?>
 
-	<?php ob_start(); ?>
+	<?php
+	wp_add_inline_script(
+	    'adt-utils',
+	    adt_capture_inline_script(
+	        static function () {
+	            ?>
 	document.addEventListener('DOMContentLoaded', () => {
 	  const btn = document.getElementById('adt-save-btn');
 	  if (btn) {
@@ -972,7 +984,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	    });
 	  }
 	});
-	<?php wp_add_inline_script( 'adt-utils', ob_get_clean() ); ?>
+	            <?php
+	        }
+	    )
+	);
+	?>
 
 
 	<?php /* .adt-saving + .adt-spinner styles are in assets/css/adt-admin.css */ ?>
