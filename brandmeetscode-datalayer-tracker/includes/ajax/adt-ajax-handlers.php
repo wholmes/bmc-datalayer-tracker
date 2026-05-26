@@ -124,19 +124,9 @@ function adt_ajax_save_setting() {
         
         $key   = isset( $_POST['key'] ) ? sanitize_text_field( wp_unslash( $_POST['key'] ) ) : '';
         $type  = isset( $_POST['type'] ) ? sanitize_text_field( wp_unslash( $_POST['type'] ) ) : '';
-        $value = isset( $_POST['value'] ) ? wp_unslash( $_POST['value'] ) : '';
-        if ( is_scalar( $value ) ) {
-            $value = sanitize_text_field( (string) $value );
-        } elseif ( is_array( $value ) ) {
-            $value = array_map(
-                static function ( $item ) {
-                    return is_scalar( $item ) ? sanitize_text_field( (string) $item ) : '';
-                },
-                $value
-            );
-        } else {
-            $value = '';
-        }
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized immediately via adt_sanitize_ajax_setting_value().
+        $raw_value = isset( $_POST['value'] ) ? wp_unslash( $_POST['value'] ) : '';
+        $value     = adt_sanitize_ajax_setting_value( $raw_value );
 
         // phpcs:enable WordPress.Security.NonceVerification.Missing
         
@@ -677,6 +667,29 @@ function adt_show_cleanup_reset_notices() {
     }
 }
 
+
+/**
+ * Sanitize a setting value payload from adt_save_setting AJAX.
+ *
+ * @param mixed $raw Raw value (scalar or array).
+ * @return string|array<int, string>
+ */
+function adt_sanitize_ajax_setting_value( $raw ) {
+	if ( is_scalar( $raw ) ) {
+		return sanitize_text_field( (string) $raw );
+	}
+
+	if ( is_array( $raw ) ) {
+		return array_map(
+			static function ( $item ) {
+				return is_scalar( $item ) ? sanitize_text_field( (string) $item ) : '';
+			},
+			$raw
+		);
+	}
+
+	return '';
+}
 
 /**
  * Cast setting value based on type
